@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Install
 
 SASS
@@ -34,7 +33,3 @@ release as a tar.gz package file.
 ```
 npm run release
 ```
-
-=======
-# dos-webstie
->>>>>>> origin/master
