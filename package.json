@@ -1,0 +1,27 @@
+{
+  "name": "dos-website",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "start": "http-server .",
+    "scss": "scss --watch styles/main.scss:css/main.css",
+    "release": "tar zcvf dos-website-$(date +%Y%m%dT%H%M).tar.gz ./*.html ./*.png ./*.ico ./css/*.css ./js ./img",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "directories": {
+    "doc": "doc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/storehubnet/dos-website.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/storehubnet/dos-website/issues"
+  },
+  "homepage": "https://github.com/storehubnet/dos-website#readme",
+  "devDependencies": {
+    "http-server": "^0.11.1"
+  }
+}
