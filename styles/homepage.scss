@@ -1,5 +1,9 @@
 @import "./var";
 
+.col-md-6 {
+  width: 50%;
+}
+
 .banner {
   background-image: url(../img/banner-bg.jpg);
   background-repeat: no-repeat;
@@ -22,5 +26,79 @@
     width: 40%;
     height: 2px;
     background-color: $main-color;
+  }
+}
+
+.intro {
+  padding: 100px 80px;
+  background-color: $light-gray;
+
+  &__title {
+    color: $white;
+    font-size: $title-font;
+    text-transform: uppercase;
+  }
+
+  &__content {
+    font-size: $main-font;
+    width: 80%;
+    color: $white;
+    line-height: 20px;
+  }
+
+  img {
+    height: 200px;
+  }
+}
+
+.section-title {
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.introduction-item {
+  padding: 50px 80px;
+  width: 100%;
+
+  &__container {
+    width: 30%;
+    text-align: center;
+    vertical-align: middle;
+    display: inline-block;
+  }
+
+  &__image {
+    height: 120px;
+
+    img {
+      height: 100%;
+    }
+  }
+
+  &__divider {
+    display: block;
+    width: 10%;
+    height: 2px;
+    margin: 0 auto;
+    background-color: $dimmed-gray;
+  }
+
+  &__title {
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: $bigger-font;
+  }
+
+  &__content {
+    height: 100px;
+    padding: 30px;
+    margin: 0;
+    line-height: 22px;
+  }
+}
+
+.team-section {
+  .introduction-item__image {
+    height: 200px;
   }
 }
