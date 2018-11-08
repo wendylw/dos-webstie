@@ -1,0 +1,26 @@
+@import "./var";
+
+.banner {
+  background-image: url(../img/banner-bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+
+  .container {
+    padding: 130px 0 115px;
+  }
+
+  &__subtitle {
+    padding: 5px 0;
+    margin: 0;
+  }
+
+  &__divider {
+    display: block;
+    margin: 40px 0;
+    max-width: 80px;
+    width: 40%;
+    height: 2px;
+    background-color: $main-color;
+  }
+}

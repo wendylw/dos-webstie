@@ -13,11 +13,17 @@
   <link rel="shortcut icon" href="favicon.ico">
   <!-- Place favicon.ico in the root directory -->
 
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300i,400,400i,600,600i,700,700i" rel="preload" as="style" onload="this.rel='stylesheet'">
+  <noscript>
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300i,400,400i,600,600i,700,700i" rel="stylesheet">
+  </noscript>
+
+  <!-- <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet"> -->
+  <!-- <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet"> -->
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
   <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/homepage.css">
 </head>
 
 <body>
@@ -66,66 +72,69 @@
   <!-- Add your site or application content here -->
   <div>
     <!-- banner -->
-    <section>
-      <h1>Decentralize oracle service</h1>
-      <h3>Boost blockchain usability with</h3>
-      <h3>Real world data and computation power</h3>
-      <i></i>
-      <ul class="social-icons up-index text-center">
-        <li class="social-icons__item text-middle">
-          <a target="_blank" href="https://medium.com/@dosnetwork">
-            <img src="./img/media-m.png" alt="">
-          </a>
-        </li>
-        <li class="social-icons__item text-middle">
-          <a target="_blank" href="https://www.reddit.com/r/DOSNetwork">
-            <img src="./img/media-reddit.png" alt="">
-          </a>
-        </li>
-        <li class="social-icons__item text-middle">
-            <a target="_blank" href="https://github.com/DOSNetwork">
-              <img src="./img/media-github.png" alt="">
+    <section class="banner">
+      <div class="container">
+        <h1 class="page-title text-weight-bolder"><span>D</span>ecentralize <span>o</span>racle <span>s</span>ervice</h1>
+        <h3 class="banner__subtitle">Boost blockchain usability with</h3>
+        <h3 class="banner__subtitle">Real world data and computation power</h3>
+        <i class="banner__divider"></i>
+        <ul class="social-icons up-index">
+          <li class="social-icons__item text-middle">
+            <a target="_blank" href="https://medium.com/@dosnetwork">
+              <img src="./img/media-m.png" alt="">
             </a>
           </li>
-        <li class="social-icons__item text-middle">
-          <a target="_blank" href="https://twitter.com/DosNetwork">
-            <img src="./img/media-twitter.png" alt="">
-          </a>
-        </li>
-        <li class="social-icons__item text-middle">
-          <a target="_blank" href="https://t.me/dosnetwork_en">
-            <img src="./img/media-telegram.png" alt="">
-          </a>
-        </li>
-        <li class="social-icons__item text-middle">
-          <a href="#qrcodeModal" rel="modal:open">
-            <img src="./img/media-wechat.png" alt="">
-          </a>
-        </li>
-        <li class="social-icons__item text-middle">
-          <a href="mailto:info@dos.network?subject=Mail to DOS Network&body=Question summary：">
-            <img src="./img/media-mail.png" alt="">
-          </a>
-        </li>
-      </ul>
-
+          <li class="social-icons__item text-middle">
+            <a target="_blank" href="https://www.reddit.com/r/DOSNetwork">
+              <img src="./img/media-reddit.png" alt="">
+            </a>
+          </li>
+          <li class="social-icons__item text-middle">
+              <a target="_blank" href="https://github.com/DOSNetwork">
+                <img src="./img/media-github.png" alt="">
+              </a>
+            </li>
+          <li class="social-icons__item text-middle">
+            <a target="_blank" href="https://twitter.com/DosNetwork">
+              <img src="./img/media-twitter.png" alt="">
+            </a>
+          </li>
+          <li class="social-icons__item text-middle">
+            <a target="_blank" href="https://t.me/dosnetwork_en">
+              <img src="./img/media-telegram.png" alt="">
+            </a>
+          </li>
+          <li class="social-icons__item text-middle">
+            <a href="#qrcodeModal" rel="modal:open">
+              <img src="./img/media-wechat.png" alt="">
+            </a>
+          </li>
+          <li class="social-icons__item text-middle">
+            <a href="mailto:info@dos.network?subject=Mail to DOS Network&body=Question summary：">
+              <img src="./img/media-mail.png" alt="">
+            </a>
+          </li>
+        </ul>
+      </div>
     </section>
     <!-- end of banner -->
 
     <!-- introduction -->
-    <section>
-      <div>
-        <div>
+    <section class="intro">
+      <div class="row">
+        <div class="col-md-6">
           <h2>What is dos network?</h2>
           <p>DOS Network is a layer 2 chain-agnostic Decentralize Oracle Service network, providing real-time data feed oracle and computation oracle solution to mainstream blockchains.</p>
         </div>
-        <div></div>
+        <div>
+          <img src="./img/intro-pic.png" alt="">
+        </div>
       </div>
     </section>
     <!-- end of introduction -->
 
     <!-- features -->
-    <section>
+    <!-- <section>
       <h2>DOS network features</h2>
       <div>
         <div>
@@ -162,7 +171,7 @@
         </div>
         <div></div>
       </div>
-    </section>
+    </section> -->
     <!-- end of features -->
 
     <!-- case -->
@@ -289,8 +298,9 @@
   </div>
 
   <script src="js/vendor/modernizr-3.6.0.min.js"></script>
-  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-  <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.3.1.min.js"><\/script>')</script>
+  <!-- <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.3.1.min.js"><\/script>')</script> -->
+  <script src="js/vendor/jquery-3.3.1.min.js"></script>
   <script src="js/plugins.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
@@ -302,17 +312,6 @@
     ga('create', 'UA-XXXXX-Y', 'auto'); ga('send', 'pageview')
   </script>
   <script src="https://www.google-analytics.com/analytics.js" async defer></script>
-  <script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script>
-  <script type='text/javascript'>
-    (function($) {
-      window.fnames = new Array();
-      window.ftypes = new Array();
-
-      fnames[0]='EMAIL';
-      ftypes[0]='email';
-    }(jQuery));
-    var $mcj = jQuery.noConflict(true);
-  </script>
 </body>
 
 </html>

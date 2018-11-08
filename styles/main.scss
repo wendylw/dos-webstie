@@ -1,7 +1,7 @@
 @import "./var";
 
 html {
-  font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
+  font-family: 'Source Sans Pro', 'Helvetica Neue', Arial, sans-serif;
   font-size: $main-font;
   color: $main-color;
 }
@@ -57,14 +57,34 @@ a {color: inherit;
   vertical-align: middle;
 }
 
+.text-weight-bold {
+  font-weight: bold;
+}
+
+.text-weight-bolder {
+  font-weight: bolder;
+}
+
 .container {
-  max-width: 1400px;
+  max-width: 1024px;
   margin: 0 auto;
   padding: 0 15px;
 }
 
+.page-title {
+  padding: 30px 0;
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+
+  span {
+    border-bottom: 2px solid $main-color;
+    font-size: inherit;
+  }
+}
+
 .social-icons {
-  padding: 30px 0 20px;
+  padding: 5px 0;
 
   &__item {
     display: inline-block;
@@ -80,23 +100,17 @@ a {color: inherit;
   }
 }
 
-.divider {
-
-  &__container {
-    text-align: center;
-
-    img {
-      max-width: 24px;
-    }
+.row {
+  &:after {
+    content: "";
+    display: block;
+    clear: both;
   }
+}
 
-  &__line {
-    display: inline-block;
-    margin: 0 auto;
-    width: 62px;
-    height: 2px;
-    background-image: linear-gradient(to right, $yellow-color, $dark-yellow-color);
-  }
+.col-md-6 {
+  float: left;
+  width: 50%;
 }
 
 .jquery-modal.blocker {
