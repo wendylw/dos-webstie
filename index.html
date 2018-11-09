@@ -35,7 +35,7 @@
     <img src="./img/dos.gif" alt="">
   </div>
 
-  <header class="header">
+  <header class="header animated">
     <div class="container">
       <div class="header__logo">
         <img src="./img/header-logo.png" alt="">
@@ -141,48 +141,64 @@
     <!-- end of introduction -->
 
     <!-- features -->
-    <section>
+    <section class="features">
       <div class="container">
-        <h2>DOS network features</h2>
-        <div>
-          <div>
-            <ul>
-              <li>
-                <h3>DECENTRALIZED & RELIABLE</h3>
-                <p>A trustless solution without single  point of failure.</p>
-              </li>
-              <li>
-                <h3>VRF AND ADVANCED CRYPTOGRAPH</h3>
-                <p>Driven by Verifiable Random Function and advanced cryptographic signatures</p>
-              </li>
-            </ul>
-          </div>
-          <div>
-            <ul>
-              <li>
-                <h3>REAL-TIME AND VERIFIABLE</h3>
-                <p>Near real-time request fulfillment  and on-chain verifiable response. </p>
-              </li>
-              <li>
-                <h3>NON-INTERACTIVE VERIFIABLE COMPUTATION</h3>
-                <p>Unbounded computation power for  smart contracts secured by SNARK-based  computation oracle</p>
-              </li>
-            </ul>
-          </div>
-          <div>
-            <ul>
-              <li>
-                <h3>COMPATIBLE TO  HETEROGENEOUS BLOCKCHAINS</h3>
-                <p>Support multiple chains and enable  cross-chain interactions.</p>
-              </li>
-              <li>
-                <h3>CRYPTO INCENTIVIZED</h3>
-                <p>Dynamic network incentivized by honest participation reward</p>
-              </li>
-            </ul>
-          </div>
-          <div>
+        <h2 class="section-title">DOS network features</h2>
+
+        <div class="features__content">
+          <ul class="row">
+            <li class="features__item col-md-4 active" data-value="1">
+              <h3 class="features__item-title">DECENTRALIZED & RELIABLE</h3>
+              <p class="features__item-content">A trustless solution without single  point of failure.</p>
+            </li>
+            <li class="features__space col-md-4"></li>
+            <li class="features__item col-md-4 text-right" data-value="2">
+              <h3 class="features__item-title">VRF AND ADVANCED CRYPTOGRAPH</h3>
+              <p class="features__item-content">Driven by Verifiable Random Function and advanced cryptographic signatures</p>
+            </li>
+          </ul>
+          <ul class="row">
+            <li class="features__item col-md-4" data-value="3">
+              <h3 class="features__item-title">REAL-TIME AND VERIFIABLE</h3>
+              <p class="features__item-content">Near real-time request fulfillment  and on-chain verifiable response. </p>
+            </li>
+            <li class="features__space col-md-4"></li>
+            <li class="features__item col-md-4 text-right" data-value="4">
+              <h3 class="features__item-title">NON-INTERACTIVE VERIFIABLE COMPUTATION</h3>
+              <p class="features__item-content">Unbounded computation power for  smart contracts secured by SNARK-based  computation oracle</p>
+            </li>
+          </ul>
+          <ul class="row">
+            <li class="features__item col-md-4" data-value="5">
+              <h3 class="features__item-title">COMPATIBLE TO  HETEROGENEOUS BLOCKCHAINS</h3>
+              <p class="features__item-content">Support multiple chains and enable  cross-chain interactions.</p>
+            </li>
+            <li class="features__space col-md-4"></li>
+            <li class="features__item col-md-4 text-right" data-value="6">
+              <h3 class="features__item-title">CRYPTO INCENTIVIZED</h3>
+              <p class="features__item-content">Dynamic network incentivized by honest participation reward</p>
+            </li>
+          </ul>
+          <div class="features__image-container">
             <img src="./img/features-pic.png" alt="">
+
+            <ul class="features__tags">
+              <li class="features__tag text-center active">1</li>
+              <li class="features__tag text-center">2</li>
+              <li class="features__tag text-center">3</li>
+              <li class="features__tag text-center">4</li>
+              <li class="features__tag text-center">5</li>
+              <li class="features__tag text-center">6</li>
+            </ul>
+
+            <div class="features__tags features__tag-active">
+              <img class="features__tag-active-1 active" src="./img/feature-tag-active.png" alt="">
+              <img class="features__tag-active-2" src="./img/feature-tag-active.png" alt="">
+              <img class="features__tag-active-3" src="./img/feature-tag-active.png" alt="">
+              <img class="features__tag-active-4" src="./img/feature-tag-active.png" alt="">
+              <img class="features__tag-active-5" src="./img/feature-tag-active.png" alt="">
+              <img class="features__tag-active-6" src="./img/feature-tag-active.png" alt="">
+            </div>
           </div>
         </div>
       </div>

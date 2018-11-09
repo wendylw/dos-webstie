@@ -1,6 +1,10 @@
 .header {
+  position: fixed;
+  display: none;
   padding: 20px 0 14px;
+  width: 100%;
   background-color: $white;
+  z-index: 10;
 
   &__logo {
     display: inline-block;
