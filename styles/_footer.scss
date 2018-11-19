@@ -5,6 +5,14 @@
   background-color: $black;
   padding: 50px 0;
 
+  &__text {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0 3px;
+    font-size: $small-font;
+    min-width: 50px;
+  }
+
   &__logo {
     width: 60%;
     max-width: 100px;
@@ -17,7 +25,6 @@
 
   &__list-container {
     vertical-align: top;
-    display: inline-block;
     padding: 0 40px 0 0;
   }
 
@@ -60,7 +67,9 @@
     padding: 5px 10px;
 
     img {
-      height: 24px;
+      vertical-align: middle;
+      margin: 0 2px;
+      height: 16px;
     }
   }
 

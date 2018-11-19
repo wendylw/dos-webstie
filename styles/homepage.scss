@@ -1,28 +1,52 @@
 @import "./var";
 
-.col-md-6 {
-  width: 50%;
-}
-
 .banner {
   color: $white;
   background-image: url(../img/banner-bg.jpg);
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: 100% 100%;
   background-position: center center;
 
   .container {
-    padding: 130px 0 115px;
+    position: relative;
+    padding: 150px 0;
+  }
+
+  .social-icons {
+    position: absolute;
+    right: 0;
+    bottom: 150px;
+  }
+
+  .hide {
+    display: none;
   }
 
   &__subtitle {
-    padding: 5px 0;
-    margin: 0;
+    padding: 10px 0 80px;
+    margin: 0 auto;
+    max-width: 580px;
+    font-size: $bigger-font;
+    font-weight: normal;
+  }
+
+  &__button-container {
+    padding: 80px 0 0;
+  }
+
+  &__button {
+    display: inline-block;
+    padding: 8px 20px;
+    margin: 0 15px;
+    border: 1px solid $white;
+    font-size: $big-font;
+    border-radius: 20px;
+    font-weight: bold;
   }
 }
 
 .intro {
-  padding: 100px 0;
+  padding: 120px 0;
   background-color: $lighter-gray;
 
   .row {
@@ -46,7 +70,6 @@
   }
 
   &__content {
-    font-size: $big-font;
     max-width: 340px;
     line-height: 1.5em;
   }
@@ -61,6 +84,8 @@
 }
 
 .features {
+  padding: 50px 0;
+
   .row {
     padding: 40px 0;
   }
@@ -129,7 +154,7 @@
   }
 
   &__image {
-    height: 80px;
+    height: 90px;
 
     img {
       height: 100%;
