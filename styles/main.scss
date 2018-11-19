@@ -88,10 +88,11 @@ a {color: inherit;
 }
 
 .section-title {
+  text-align: center;
   padding: 40px;
   margin: 0;
+  font-size: $title-font;
   text-transform: uppercase;
-  text-align: center;
 }
 
 .social-icons {

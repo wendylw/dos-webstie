@@ -23,8 +23,7 @@
 
 .intro {
   padding: 100px 0;
-  color: $white;
-  background-color: $light-gray;
+  background-color: $lighter-gray;
 
   .row {
     position: relative;
@@ -81,21 +80,23 @@
   }
 
   &__item:not(.text-right) {
-    padding-right: 5%;
+    padding-right: 8%;
   }
 
   &__item.text-right {
-    padding-left: 5%;
+    padding-left: 8%;
   }
 
   &__item-title {
-    margin: 0 0 10px;
+    display: inline-block;
+    padding-bottom: 10px;
+    margin: 0;
+    border-bottom: 1px solid $main-color;
   }
 
   &__item-content {
     margin: 0;
     padding: 10px 0 0;
-    border-top: 1px solid $main-color;
   }
 
   &__space {
@@ -105,15 +106,15 @@
 
   &__image-container {
     position: absolute;
-    left: 28.333333%;
-    right: 28.333333%;
+    left: 28%;
+    right: 28%;
     top: 0;
     padding: 40px 0;
-    width: 43.333333%;
+    width: 44%;
 
     img {
       display: block;
-      margin: 0 auto;
+      margin: 2% auto;
       width: 94%;
     }
   }
@@ -121,6 +122,7 @@
 
 .case {
   padding: 50px 0;
+  background-color: $lighter-gray;
 
   &__list {
     padding: 30px 0;
@@ -144,9 +146,7 @@
 
   &__title {
     margin: 20px 0;
-    text-transform: uppercase;
     font-weight: bold;
-    font-size: $big-font;
   }
 
   &__content {
