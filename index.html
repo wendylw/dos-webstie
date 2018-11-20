@@ -13,11 +13,17 @@
   <link rel="shortcut icon" href="favicon.ico">
   <!-- Place favicon.ico in the root directory -->
 
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300i,400,400i,600,600i,700,700i" rel="preload" as="style" onload="this.rel='stylesheet'">
+  <noscript>
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300i,400,400i,600,600i,700,700i" rel="stylesheet">
+  </noscript>
+
+  <!-- <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet"> -->
+  <!-- <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet"> -->
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
   <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/homepage.css">
 </head>
 
 <body>
@@ -29,257 +35,457 @@
     <img src="./img/dos.gif" alt="">
   </div>
 
-  <header>
-    <div>
-      <img src="" alt="">
+  <header class="header animated">
+    <div class="container">
+      <div class="header__logo">
+        <img src="./img/header-logo.png" alt="">
+      </div>
+      <nav class="header__nav">
+        <ul class="header__list">
+          <li class="header__item">
+            <a class="header__item-link" href="">About us</a>
+          </li>
+          <li class="header__item">
+            <a class="header__item-link" href="">Innovation</a>
+          </li>
+          <li class="header__item">
+            <a class="header__item-link" href="">Use case</a>
+          </li>
+          <li class="header__item">
+            <a class="header__item-link" href="">Team</a>
+          </li>
+          <li class="header__item">
+            <a class="header__item-link" href="">Road map</a>
+          </li>
+          <li class="header__item">
+            <a class="header__item-link" href="">Whitepaper</a>
+          </li>
+          <li class="header__item">
+            <a class="header__item-link" href="">Testnet</a>
+          </li>
+          <li class="header__item">
+            <a class="header__item-link" href="">F&Q</a>
+          </li>
+          <li class="header__item">
+            <a class="header__item-link" href="">Contact us</a>
+          </li>
+        </ul>
+      </nav>
     </div>
-    <nav>
-      <ul>
-        <li>
-          <a href=""></a>
-        </li>
-        <li>
-          <a href=""></a>
-        </li>
-        <li>
-          <a href=""></a>
-        </li>
-        <li>
-          <a href=""></a>
-        </li>
-        <li>
-          <a href=""></a>
-        </li>
-        <li>
-          <a href=""></a>
-        </li>
-        <li>
-          <a href=""></a>
-        </li>
-        <li>
-          <a href=""></a>
-        </li>
-      </ul>
-    </nav>
   </header>
 
   <!-- Add your site or application content here -->
   <div>
     <!-- banner -->
-    <section>
-      <h1>Decentralize oracle service</h1>
-      <h3>Boost blockchain usability with</h3>
-      <h3>Real world data and computation power</h3>
-      <i></i>
-      <ul class="social-icons up-index text-center">
-        <li class="social-icons__item text-middle">
-          <a target="_blank" href="https://medium.com/@dosnetwork">
-            <img src="./img/media-m.png" alt="">
-          </a>
-        </li>
-        <li class="social-icons__item text-middle">
-          <a target="_blank" href="https://www.reddit.com/r/DOSNetwork">
-            <img src="./img/media-reddit.png" alt="">
-          </a>
-        </li>
-        <li class="social-icons__item text-middle">
-            <a target="_blank" href="https://github.com/DOSNetwork">
-              <img src="./img/media-github.png" alt="">
+    <section class="banner">
+      <div class="container text-center">
+        <h1 class="page-title text-weight-bolder">DOS NETWORK</h1>
+        <h3 class="banner__subtitle">A Decentralized Oracle Service Network to Boost Blockchain Usability with Real World Data and Computation Power</h3>
+        <div class="banner__button-container">
+          <a class="banner__button" href="">BLOGS</a>
+          <a class="banner__button" href="">DEVELOPERS</a>
+          <a class="banner__button hide" href="">DEVELOPERS</a>
+          <a class="banner__button hide" href="">DEVELOPERS</a>
+        </div>
+        <ul class="social-icons up-index">
+          <li class="social-icons__item text-middle">
+            <a target="_blank" href="https://medium.com/@dosnetwork">
+              <img src="./img/media-m.png" alt="">
             </a>
           </li>
-        <li class="social-icons__item text-middle">
-          <a target="_blank" href="https://twitter.com/DosNetwork">
-            <img src="./img/media-twitter.png" alt="">
-          </a>
-        </li>
-        <li class="social-icons__item text-middle">
-          <a target="_blank" href="https://t.me/dosnetwork_en">
-            <img src="./img/media-telegram.png" alt="">
-          </a>
-        </li>
-        <li class="social-icons__item text-middle">
-          <a href="#qrcodeModal" rel="modal:open">
-            <img src="./img/media-wechat.png" alt="">
-          </a>
-        </li>
-        <li class="social-icons__item text-middle">
-          <a href="mailto:info@dos.network?subject=Mail to DOS Network&body=Question summary：">
-            <img src="./img/media-mail.png" alt="">
-          </a>
-        </li>
-      </ul>
-
+          <li class="social-icons__item text-middle">
+            <a target="_blank" href="https://www.reddit.com/r/DOSNetwork">
+              <img src="./img/media-reddit.png" alt="">
+            </a>
+          </li>
+          <li class="social-icons__item text-middle">
+              <a target="_blank" href="https://github.com/DOSNetwork">
+                <img src="./img/media-github.png" alt="">
+              </a>
+            </li>
+          <li class="social-icons__item text-middle">
+            <a target="_blank" href="https://twitter.com/DosNetwork">
+              <img src="./img/media-twitter.png" alt="">
+            </a>
+          </li>
+          <li class="social-icons__item text-middle">
+            <a target="_blank" href="https://t.me/dosnetwork_en">
+              <img src="./img/media-telegram.png" alt="">
+            </a>
+          </li>
+          <li class="social-icons__item text-middle">
+            <a href="#qrcodeModal" rel="modal:open">
+              <img src="./img/media-wechat.png" alt="">
+            </a>
+          </li>
+        </ul>
+      </div>
     </section>
     <!-- end of banner -->
 
     <!-- introduction -->
-    <section>
-      <div>
-        <div>
-          <h2>What is dos network?</h2>
-          <p>DOS Network is a layer 2 chain-agnostic Decentralize Oracle Service network, providing real-time data feed oracle and computation oracle solution to mainstream blockchains.</p>
+    <section class="intro">
+      <div class="container">
+        <div class="row">
+          <div class="intro__content-container col-md-6">
+            <div>
+              <h2 class="intro__title">Oracle Problem</h2>
+              <p class="intro__content">Blockchain empowered smart contracts are isolated from the internet world and cannot access external data directly. Computation within the smart contract is alsoexcessively expensive and limited by resource capacity.</p>
+            </div>
+            <div>
+              <h2 class="intro__title">DOS Network is</h2>
+              <p class="intro__content">A Decentralized Oracle Service supporting multiple heterogeneous blockchains. DOS Network brings real word data, event and computation power to smart contract in a secure, reliable, efficient and scalable way.</p>
+            </div>
+          </div>
+          <div class="intro__image-container col-md-6">
+            <img class="intro__image" src="./img/intro-pic.png" alt="">
+          </div>
         </div>
-        <div></div>
       </div>
     </section>
     <!-- end of introduction -->
 
     <!-- features -->
-    <section>
-      <h2>DOS network features</h2>
-      <div>
-        <div>
-          <ul>
-            <li>
-              <h3></h3>
-              <p></p>
+    <section class="features">
+      <div class="container">
+        <h2 class="section-title">Innovations</h2>
+
+        <div class="features__content">
+          <ul class="row">
+            <li class="features__item col-md-4 active" data-value="1">
+              <h3 class="features__item-title">Decentralized and Reliable</h3>
+              <p class="features__item-content">A trustworthy decentralized solution without single point of failure.</p>
             </li>
-            <li>
-              <h3></h3>
-              <p></p>
-            </li>
-            <li>
-              <h3></h3>
-              <p></p>
+            <li class="features__space col-md-4"></li>
+            <li class="features__item col-md-4 text-right" data-value="2">
+              <h3 class="features__item-title">Secure and Trustworthy</h3>
+              <p class="features__item-content">Driven by Verifiable Random Engine and advanced cryptographic signatures.</p>
             </li>
           </ul>
-        </div>
-        <div>
-          <ul>
-            <li>
-              <h3></h3>
-              <p></p>
+          <ul class="row">
+            <li class="features__item col-md-4" data-value="3">
+              <h3 class="features__item-title">Real-Time and Verifiable</h3>
+              <p class="features__item-content">Near real-time request fulfillment and on-chain verifiable response.</p>
             </li>
-            <li>
-              <h3></h3>
-              <p></p>
-            </li>
-            <li>
-              <h3></h3>
-              <p></p>
+            <li class="features__space col-md-4"></li>
+            <li class="features__item col-md-4 text-right" data-value="4">
+              <h3 class="features__item-title">Scalable at a Low Cost</h3>
+              <p class="features__item-content">Data query throughput and computation capacity increases as more nodes join.</p>
             </li>
           </ul>
+          <ul class="row">
+            <li class="features__item col-md-4" data-value="5">
+              <h3 class="features__item-title">Compatible to  Heterogeneous Blockchains</h3>
+              <p class="features__item-content">Support multiple blockchains and enable cross-chain interactions.</p>
+            </li>
+            <li class="features__space col-md-4"></li>
+            <li class="features__item col-md-4 text-right" data-value="6">
+              <h3 class="features__item-title">Crypto Incentivized</h3>
+              <p class="features__item-content">Dynamic network incentivized by honest participation rewards.</p>
+            </li>
+          </ul>
+          <div class="features__image-container">
+            <img src="./img/features-pic.png" alt="">
+          </div>
         </div>
-        <div></div>
       </div>
     </section>
     <!-- end of features -->
 
     <!-- case -->
-    <section>
-      <h2>Use case</h2>
-
-      <ul>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-      </ul>
+    <section class="case">
+      <div class="container">
+        <h2 class="section-title">Use case</h2>
+        <ul class="case__list row">
+          <li class="col-md-4 case__item text-center">
+            <div class="case__image">
+              <img src="img/case-1.png" />
+            </div>
+            <h3 class="case__title">Automatic Insurance Payout </h3>
+            <p class="case__content">
+              With DOS Network, many scenarios like flight delay insurance are able to achieve automatic payout by bringing external data and events to the insurance contract.
+            </p>
+          </li>
+          <li class="col-md-4 case__item text-center">
+            <div class="case__image">
+              <img src="img/case-2.png" />
+            </div>
+            <h3 class="case__title">Stablecoins and Crypto Derivatives</h3>
+            <p class="case__content">
+              Stablecoins and crypto derivatives require a frequent use of DOS Network to fetch realtime price feed reliably and verifiably.
+            </p>
+          </li>
+          <li class="col-md-4 case__item text-center">
+            <div class="case__image">
+              <img src="img/case-3.png" />
+            </div>
+            <h3 class="case__title">Crypto Lending Platform</h3>
+            <p class="case__content">
+              DOS Network makes it easy for crypto lending platform to get exchange rates, import borrowers' social media data and trustlessly determine the interest rates on the fly.
+            </p>
+          </li>
+        </ul>
+        <ul class="case__list row">
+          <li class="col-md-4 case__item text-center">
+            <div class="case__image">
+              <img src="img/case-4.png" />
+            </div>
+            <h3 class="case__title">Cross-chain Dex</h3>
+            <p class="case__content">
+              Deploying two DEX contracts on different blockchains and DOS Network acts as an bridge to connect heterogeneous transactions crossing chains.
+            </p>
+          </li>
+          <li class="col-md-4 case__item text-center">
+            <div class="case__image">
+              <img src="img/case-5.png" />
+            </div>
+            <h3 class="case__title">Casinos And Games </h3>
+            <p class="case__content">
+              Secure randomness is the core to blockchain based casinos and games. DOS Network provides unpredictable, verifiable, and secure randomness to drive those applications.
+            </p>
+          </li>
+          <li class="col-md-4 case__item text-center">
+            <div class="case__image">
+              <img src="img/case-6.png" />
+            </div>
+            <h3 class="case__title">Computation Marketplace </h3>
+            <p class="case__content">
+              Commercial computation intensive tasks, such as machine learning model training, 3D rendering, benefit a lot from verifiable off-chain computation market.
+            </p>
+          </li>
+        </ul>
+      </div>
     </section>
     <!-- end of case -->
 
     <!-- team -->
-    <section>
-      <h2>Meet the team</h2>
-      <ul>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-      </ul>
+    <section class="team">
+      <div class="container">
+        <h2 class="section-title">Meet the team</h2>
+        <ul class="team__list row">
+          <li class="team__item col-md-4">
+            <div class="team__image">
+              <img src="./img/team-1.png" />
+            </div>
+            <p>Siyuan Hua</p>
+            <p>Project Lead</p>
+            <p class="team__content text-center">
+                Stablecoins and crypto derivatives require a frequent use of DOS Network to fetch realtime price feed reliably and verifiably.
+            </p>
+          </li>
+          <li class="team__item col-md-4">
+            <div class="team__image">
+              <img src="./img/team-1.png" />
+            </div>
+            <p>Siyuan Hua</p>
+            <p>Project Lead</p>
+            <p class="team__content text-center">
+                Stablecoins and crypto derivatives require a frequent use of DOS Network to fetch realtime price feed reliably and verifiably.
+            </p>
+          </li>
+          <li class="team__item col-md-4">
+            <div class="team__image">
+              <img src="./img/team-1.png" />
+            </div>
+            <p>Siyuan Hua</p>
+            <p>Project Lead</p>
+            <p class="team__content text-center">
+                Stablecoins and crypto derivatives require a frequent use of DOS Network to fetch realtime price feed reliably and verifiably.
+            </p>
+          </li>
+        </ul>
+        <ul class="team__list row">
+          <li class="team__item col-md-4">
+            <div class="team__image">
+              <img src="./img/team-1.png" />
+            </div>
+            <p>Siyuan Hua</p>
+            <p>Project Lead</p>
+            <p class="team__content text-center">
+                Stablecoins and crypto derivatives require a frequent use of DOS Network to fetch realtime price feed reliably and verifiably.
+            </p>
+          </li>
+          <li class="team__item col-md-4">
+            <div class="team__image">
+              <img src="./img/team-1.png" />
+            </div>
+            <p>Siyuan Hua</p>
+            <p>Project Lead</p>
+            <p class="team__content text-center">
+                Stablecoins and crypto derivatives require a frequent use of DOS Network to fetch realtime price feed reliably and verifiably.
+            </p>
+          </li>
+          <li class="team__item col-md-4">
+            <div class="team__image">
+              <img src="./img/team-1.png" />
+            </div>
+            <p>Siyuan Hua</p>
+            <p>Project Lead</p>
+            <p class="team__content text-center">
+                Stablecoins and crypto derivatives require a frequent use of DOS Network to fetch realtime price feed reliably and verifiably.
+            </p>
+          </li>
+        </ul>
+      </div>
     </section>
     <!-- end of team -->
 
+    <!-- advisors -->
+    <section class="team">
+      <div class="container">
+        <h2 class="section-title">Advisors</h2>
+        <ul class="team__list row">
+          <li class="team__item col-md-4">
+            <div class="team__image">
+              <img src="./img/team-1.png" />
+            </div>
+            <p>Siyuan Hua</p>
+            <p>Project Lead</p>
+            <p class="team__content text-center">
+                Stablecoins and crypto derivatives require a frequent use of DOS Network to fetch realtime price feed reliably and verifiably.
+            </p>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <!-- end of advisors -->
+
+    <!-- Investors -->
+    <section class="team">
+        <div class="container">
+          <h2 class="section-title">Investors</h2>
+          <ul class="team__list row">
+            <li class="team__item col-md-4">
+              <div class="team__image">
+                <img src="./img/team-1.png" />
+              </div>
+              <p>Siyuan Hua</p>
+              <p>Project Lead</p>
+              <p class="team__content text-center">
+                  Stablecoins and crypto derivatives require a frequent use of DOS Network to fetch realtime price feed reliably and verifiably.
+              </p>
+            </li>
+            <li class="team__item col-md-4">
+              <div class="team__image">
+                <img src="./img/team-1.png" />
+              </div>
+              <p>Siyuan Hua</p>
+              <p>Project Lead</p>
+              <p class="team__content text-center">
+                  Stablecoins and crypto derivatives require a frequent use of DOS Network to fetch realtime price feed reliably and verifiably.
+              </p>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <!-- end of Investors -->
+
+      <!-- Partners -->
+    <section class="team">
+        <div class="container">
+          <h2 class="section-title">Partners</h2>
+          <ul class="team__list row">
+            <li class="team__item col-md-4">
+              <div class="team__image">
+                <img src="./img/team-1.png" />
+              </div>
+              <p>Siyuan Hua</p>
+              <p>Project Lead</p>
+              <p class="team__content text-center">
+                  Stablecoins and crypto derivatives require a frequent use of DOS Network to fetch realtime price feed reliably and verifiably.
+              </p>
+            </li>
+            <li class="team__item col-md-4">
+              <div class="team__image">
+                <img src="./img/team-1.png" />
+              </div>
+              <p>Siyuan Hua</p>
+              <p>Project Lead</p>
+              <p class="team__content text-center">
+                  Stablecoins and crypto derivatives require a frequent use of DOS Network to fetch realtime price feed reliably and verifiably.
+              </p>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <!-- end of Partners -->
+
     <!-- road map -->
-    <section>
-      <h2>Road map</h2>
-      <ul>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-      </ul>
+    <section class="road-map">
+      <div class="container">
+        <h2 class="section-title text-center">Road map</h2>
+        <img class="road-map__content" src="./img/road-map-content.png" alt="">
+      </div>
     </section>
     <!-- end of road map -->
   </div>
   <!-- end of Add your site or application content here -->
 
-  <footer>
-    <div>
-      <div>
-        <img src="" alt="">
-      </div>
-      <div>
-        <div>
-          <h4></h4>
-          <ul>
-            <li></li>
-            <li></li>
-            <li></li>
-          </ul>
+  <footer class="footer">
+    <div class="container">
+        <div class="row">
+          <div class="col-md-3">
+            <img class="footer__logo" src="./img/footer-logo.png" alt="">
+          </div>
+          <div class="col-md-5">
+            <div class="footer__list-container text-center">
+              <h4 class="footer__subtitle text-upppercase">Subscribe to DOS Network Newsletter</h4>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <h4 class="footer__subtitle text-upppercase"></h4>
+            <div class="footer__social-container">
+              <ul>
+                <li class="footer__social-item">
+                  <a class="footer__social-item-link" href="">
+                    <img src="./img/media-telegram.png" alt="">
+                    <span class="footer__text">Telegram</span>
+                  </a>
+                </li>
+                <li class="footer__social-item">
+                  <a class="footer__social-item-link" href="">
+                    <img src="./img/media-m.png" alt="">
+                    <span class="footer__text">Medium</span>
+                  </a>
+                </li>
+                <li class="footer__social-item">
+                  <a class="footer__social-item-link" href="">
+                    <img src="./img/media-twitter.png" alt="">
+                    <span class="footer__text">Twitter</span>
+                  </a>
+                </li>
+              </ul>
+              <ul>
+                <li class="footer__social-item">
+                  <a class="footer__social-item-link" href="">
+                    <img src="./img/media-wechat.png" alt="">
+                    <span class="footer__text">Wechat</span>
+                  </a>
+                </li>
+                <li class="footer__social-item">
+                  <a class="footer__social-item-link" href="">
+                    <img src="./img/media-github.png" alt="">
+                    <span class="footer__text">GitHub</span>
+                  </a>
+                </li>
+                <li class="footer__social-item">
+                  <a class="footer__social-item-link" href="">
+                    <img src="./img/media-reddit.png" alt="">
+                    <span class="footer__text">Reddit</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
         </div>
-        <div>
-          <h4></h4>
-          <button></button>
-          <button></button>
-        </div>
-      </div>
-      <div>
-        <h4></h4>
-        <ul>
-          <li>
-            <a href=""></a>
-          </li>
-          <li>
-            <a href=""></a>
-          </li>
-          <li>
-            <a href=""></a>
-          </li>
-          <li>
-            <a href=""></a>
-          </li>
-          <li>
-            <a href=""></a>
-          </li>
-          <li>
-            <a href=""></a>
-          </li>
-          <li>
-            <a href=""></a>
-          </li>
-          <li>
-            <a href=""></a>
-          </li>
-          <li>
-            <a href=""></a>
-          </li>
-          <li>
-            <a href=""></a>
-          </li>
-          <li>
-            <a href=""></a>
-          </li>
-          <li>
-            <a href=""></a>
-          </li>
-        </ul>
-      </div>
-    </div>
 
-    <div>
-      <span></span>
-      <div>
-        <ul>
-          <li></li>
-          <li></li>
-          <li></li>
-        </ul>
-      </div>
+        <div class="footer__info">
+          <div class="row">
+            <div class="col-md-8">
+              <span>Copyright &copy; 2018 Block.one. All rights reserved.</span>
+            </div>
+          </div>
+        </div>
     </div>
   </footer>
 
@@ -289,8 +495,9 @@
   </div>
 
   <script src="js/vendor/modernizr-3.6.0.min.js"></script>
-  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-  <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.3.1.min.js"><\/script>')</script>
+  <!-- <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.3.1.min.js"><\/script>')</script> -->
+  <script src="js/vendor/jquery-3.3.1.min.js"></script>
   <script src="js/plugins.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
@@ -302,17 +509,6 @@
     ga('create', 'UA-XXXXX-Y', 'auto'); ga('send', 'pageview')
   </script>
   <script src="https://www.google-analytics.com/analytics.js" async defer></script>
-  <script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script>
-  <script type='text/javascript'>
-    (function($) {
-      window.fnames = new Array();
-      window.ftypes = new Array();
-
-      fnames[0]='EMAIL';
-      ftypes[0]='email';
-    }(jQuery));
-    var $mcj = jQuery.noConflict(true);
-  </script>
 </body>
 
 </html>
