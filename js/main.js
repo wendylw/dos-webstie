@@ -15,11 +15,17 @@ function stopCount() {
 
 function activeFeaturePoint(index) {
   var items = $('.features__item');
+  var circleItems = $('.features__circle-item');
 
   $('.features__circle-item').removeClass('active');
   $('.features__item').removeClass('active');
 
-  $('.features__circle-item').eq(index).addClass('active');
+  $.each(circleItems, function() {
+    if ($(this).data('value') === index) {
+      $(this).addClass('active');
+    }
+  });
+
   $.each(items, function() {
     if ($(this).data('value') === index) {
       $(this).addClass('active');
@@ -57,7 +63,7 @@ function activeFeaturePoint(index) {
     var el = $(this);
 
     setTimeout(function() {
-      currentIndex = el.data('value') || el.index();
+      currentIndex = el.data('value');
       activeFeaturePoint(currentIndex);
     }, 10);
 
@@ -74,6 +80,6 @@ function activeFeaturePoint(index) {
   window.onload = function () {
     $('.loading').addClass('hidden');
     setHeader();
-    // timedCount();
+    timedCount();
   };
 }(jQuery));
