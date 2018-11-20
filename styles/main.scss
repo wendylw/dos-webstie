@@ -40,6 +40,30 @@ a {color: inherit;
   text-decoration: none;
 }
 
+.d-flex {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.flex-top {
+  -ms-flex-align: top;
+  -webkit-align-items: top;
+  align-items: top;
+}
+
+.justify-content-around {
+  -ms-flex-pack: distribute;
+  -webkit-justify-content: space-around;
+  justify-content: space-around;
+}
+
+.justify-content-evenly {
+  -ms-flex-pack: distribute;
+  -webkit-justify-content: space-evenly;
+  justify-content: space-evenly;
+}
+
 .up-index {
   position: relative;
   z-index: 2;
