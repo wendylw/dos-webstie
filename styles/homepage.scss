@@ -91,6 +91,20 @@
     padding: 40px 0;
   }
 
+  .circle-1 {
+    animation: circleOpacity 5s infinite;
+  }
+
+  .circle-2 {
+    animation: circleOpacity 5s infinite;
+    animation-delay: .6s;
+  }
+
+  .circle-3 {
+    animation: circleOpacity 5s infinite;
+    animation-delay: 1.2s;
+  }
+
   &__content {
     position: relative;
   }
@@ -135,13 +149,76 @@
     left: 28%;
     right: 28%;
     top: 0;
-    padding: 40px 0;
+    margin: 40px 0;
     width: 44%;
 
     img {
       display: block;
       margin: 2% auto;
       width: 94%;
+    }
+  }
+
+  &__circles {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: 2% auto;
+    width: 94%;
+  }
+
+  &__circle-item {
+    position: relative;
+  }
+
+  &__circle-item:nth-child(1) {
+    top: 7.5%;
+    left: 47.17%;
+  }
+
+  &__circle-item:nth-child(2) {
+    top: 49.3%;
+    left: 68%;
+  }
+
+  &__circle-item:nth-child(6) {
+    top: 49.3%;
+    left: 26%;
+  }
+
+  &__circle-item:nth-child(3),
+  &__circle-item:nth-child(4),
+  &__circle-item:nth-child(5) {
+    top: 91.5%;
+  }
+
+  &__circle-item:nth-child(3) {
+    left: 4.8%;
+  }
+
+  &__circle-item:nth-child(4) {
+    left: 47.17%;
+  }
+
+  &__circle-item:nth-child(5) {
+    left: 89.3%;
+  }
+
+  &__circle {
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: block;
+    width: 5%;
+    border: 2px solid $black;
+    border-radius: 50%;
+
+    &:before {
+      content: "";
+      display: block;
+      padding: 50% 0;
     }
   }
 }
