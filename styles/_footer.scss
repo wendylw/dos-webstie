@@ -3,7 +3,7 @@
 .footer {
   color: $white;
   background-color: $black;
-  padding: 50px 0;
+  padding: 50px 0 30px;
 
   &__text {
     display: inline-block;
@@ -40,17 +40,6 @@
     padding: 5px 0;
   }
 
-  &__button {
-    display: block;
-    padding: 6px 14px;
-    margin: 13px 0;
-    border: 1px solid $white;
-    color: $white;
-    background-color: transparent;
-    outline: none;
-    box-shadow: none;
-  }
-
   &__social-container {
     padding: 14px 0;
     margin: 0 -10px;
@@ -74,7 +63,7 @@
   }
 
   &__info {
-    padding-top: 40px;
+    padding-top: 30px;
     font-size: $smaller-font;
   }
 
@@ -101,5 +90,31 @@
 
   &__privacy-item:first-child:before {
     display: none;
+  }
+
+  &__form-container {
+    margin: 24px 0;
+    font-size: 0;
+  }
+
+  &__input {
+    font-size: $main-font;
+    min-width: 160px;
+    font-weight: bold;
+    border-radius: 12px 0 0 12px;
+  }
+
+  &__button {
+    border: 0;
+    font-size: $main-font;
+    color: $white;
+    background-color: $light-gray;
+    font-weight: bold;
+    border-radius: 0 12px 12px 0;
+  }
+
+  &__email-icon {
+    margin-right: 6px;
+    max-width: 16px;
   }
 }

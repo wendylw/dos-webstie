@@ -23,7 +23,7 @@
   }
 
   &__subtitle {
-    padding: 10px 0 80px;
+    padding: 30px 0 100px;
     margin: 0 auto;
     max-width: 580px;
     font-size: $bigger-font;
@@ -92,17 +92,17 @@
   }
 
   .circle-1 {
-    animation: circleOpacity 5s infinite;
+    animation: circleOpacity 6s infinite;
   }
 
   .circle-2 {
-    animation: circleOpacity 5s infinite;
-    animation-delay: .6s;
+    animation: circleOpacity 6s infinite;
+    animation-delay: .8s;
   }
 
   .circle-3 {
-    animation: circleOpacity 5s infinite;
-    animation-delay: 1.2s;
+    animation: circleOpacity 6s infinite;
+    animation-delay: 1.4s;
   }
 
   &__content {
@@ -171,6 +171,13 @@
 
   &__circle-item {
     position: relative;
+    display: inline-block;
+    opacity: 0;
+
+    transition: all 0.4s;
+    -webkit-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+    -ms-transition: all 0.4s;
   }
 
   &__circle-item:nth-child(1) {
@@ -185,7 +192,7 @@
 
   &__circle-item:nth-child(6) {
     top: 49.3%;
-    left: 26%;
+    left: 22.5%;
   }
 
   &__circle-item:nth-child(3),
@@ -194,26 +201,46 @@
     top: 91.5%;
   }
 
-  &__circle-item:nth-child(3) {
-    left: 4.8%;
+  &__circle-item:nth-child(5) {
+    left: 2%;
   }
 
   &__circle-item:nth-child(4) {
-    left: 47.17%;
+    left: 45.17%;
   }
 
-  &__circle-item:nth-child(5) {
-    left: 89.3%;
+  &__circle-item:nth-child(3) {
+    left: 88.3%;
+  }
+
+  &__circle-item.active {
+    width: 6%;
+    background-image: url(../img/feature-tag-active.png);
+    background-repeat: no-repeat;
+    background-size: 40% auto;
+    background-position: center center;
+    opacity: 1;
+
+    &:before {
+      content: "";
+      display: block;
+      padding: 50% 0;
+    }
   }
 
   &__circle {
     position: absolute;
     left: 0;
     top: 0;
+    right: 0;
+    bottom: 0;
     display: block;
-    width: 5%;
-    border: 2px solid $black;
+    background-image: url(../img/circle.png);
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    background-position: center center;
     border-radius: 50%;
+    cursor: pointer;
 
     &:before {
       content: "";
@@ -264,10 +291,6 @@
 .team {
   padding: 50px 0;
 
-  .row:after {
-    content: none;
-  }
-
   &__list {
     padding: 30px 0;
   }
@@ -279,10 +302,6 @@
     img {
       width: 100%;
     }
-  }
-
-  &__item {
-    float: none;
   }
 
   &__content {
@@ -303,6 +322,27 @@
     color: $dimmed-gray;
     font-weight: bold;
     font-style: italic;
+  }
+}
+
+.advisors,
+.investors,
+.partners {
+  padding: 50px 0;
+
+  .row:before {
+    content: "";
+    display: block;
+    width: 25%;
+    clear: both;
+  }
+
+  .row:after {
+    width: 25%;
+  }
+
+  .team__item {
+    float: none;
   }
 }
 

@@ -1,3 +1,32 @@
+var currentIndex = -1;
+var t = null;
+
+function timedCount() {
+  currentIndex = (currentIndex + 1) % 6;
+
+  activeFeaturePoint(currentIndex);
+
+  t = setTimeout("timedCount()", 6000);
+}
+
+function stopCount() {
+  clearTimeout(t);
+}
+
+function activeFeaturePoint(index) {
+  var items = $('.features__item');
+
+  $('.features__circle-item').removeClass('active');
+  $('.features__item').removeClass('active');
+
+  $('.features__circle-item').eq(index).addClass('active');
+  $.each(items, function() {
+    if ($(this).data('value') === index) {
+      $(this).addClass('active');
+    }
+  });
+}
+
 (function($) {
   function getBodyScrollTop() {
     var scrollTop = window.pageYOffset  //用于FF
@@ -22,6 +51,22 @@
     }
   }
 
+  $('.features__circle-item, .features__item').on('mouseenter', function() {
+    stopCount();
+
+    var el = $(this);
+
+    setTimeout(function() {
+      currentIndex = el.data('value') || el.index();
+      activeFeaturePoint(currentIndex);
+    }, 10);
+
+  });
+
+  $('.features__circle-item, .features__item').on('mouseleave', function() {
+    timedCount();
+  });
+
   $( window ).scroll(function() {
     setHeader();
   });
@@ -29,5 +74,6 @@
   window.onload = function () {
     $('.loading').addClass('hidden');
     setHeader();
+    // timedCount();
   };
 }(jQuery));
