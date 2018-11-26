@@ -1,6 +1,6 @@
 .header {
   position: fixed;
-  padding: 20px 0 14px;
+  padding: 16px 0;
   width: 100%;
   color: $white;
   background-color: transparent;
@@ -10,7 +10,7 @@
 
   &__logo {
     display: inline-block;
-    width: 70px;
+    width: 56px;
 
     img {
       width: 100%;
@@ -22,7 +22,7 @@
   }
 
   &__list {
-    padding: 30px 0 10px;
+    padding: 10px 0;
     margin: 0 -14px;
   }
 
@@ -33,6 +33,7 @@
   &__item-link {
     display: block;
     padding: 6px 14px;
+    font-size: $big-font;
   }
 
   &__item-link:hover {
