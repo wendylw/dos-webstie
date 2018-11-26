@@ -1,10 +1,12 @@
 .header {
   position: fixed;
-  display: none;
   padding: 20px 0 14px;
   width: 100%;
-  background-color: $white;
+  color: $white;
+  background-color: transparent;
   z-index: 10;
+
+  transition: all 0.4s;
 
   &__logo {
     display: inline-block;
@@ -31,5 +33,18 @@
   &__item-link {
     display: block;
     padding: 6px 14px;
+  }
+
+  &__item-link:hover {
+    font-weight: bold;
+  }
+
+  &.white {
+    color: $black;
+    background-color: rgba(255, 255, 255, 0.8);
+  }
+
+  &.black {
+    background-color: rgba(0, 0, 0, 0.8);
   }
 }

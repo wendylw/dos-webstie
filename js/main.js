@@ -47,13 +47,15 @@ function activeFeaturePoint(index) {
     var newScrollTop = getBodyScrollTop();
     var bannerHeight = $('.banner').height();
 
-    if (newScrollTop >= bannerHeight && !$('.header').hasClass('fadeInDown')) {
-      $('.header').show();
-      $('.header').addClass('fadeInDown');
-      $('.header').removeClass('fadeOutUp');
-    } else if (newScrollTop < bannerHeight && !$('.header').hasClass('fadeOutUp')) {
-      $('.header').addClass('fadeOutUp');
-      $('.header').removeClass('fadeInDown');
+    if (newScrollTop >= bannerHeight && !$('.header').hasClass('white')) {
+      $('.header').addClass('white');
+      $('.header').removeClass('black');
+    } else if (newScrollTop < bannerHeight && newScrollTop > 0 && !$('.header').hasClass('black')) {
+      $('.header').addClass('black');
+      $('.header').removeClass('white');
+    } else if (newScrollTop <= 0) {
+      $('.header').removeClass('black');
+      $('.header').removeClass('white');
     }
   }
 

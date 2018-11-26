@@ -1,6 +1,7 @@
 @import "./var";
 
 .banner {
+  padding-top: 102px;
   color: $white;
   background-image: url(../img/banner-bg.jpg);
   background-repeat: no-repeat;
@@ -255,7 +256,7 @@
   background-color: $lighter-gray;
 
   .container {
-    max-width: 1170px;
+    max-width: 1024px;
   }
 
   &__list {
@@ -296,7 +297,7 @@
   padding: 50px 0;
 
   .container {
-    max-width: 1090px;
+    max-width: 1024px;
   }
 
   &__list {
@@ -314,7 +315,7 @@
 
   &__content {
     margin: 14px auto 0;
-    width: 215px;
+    width: 190px;
     font-size: $small-font;
     line-height: 1.5em;
     color: $dimmed-gray;
@@ -339,7 +340,7 @@
   padding: 50px 0;
 
   .container {
-    max-width: 1090px;
+    max-width: 1024px;
   }
 
   .row:before {
