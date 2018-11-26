@@ -140,11 +140,11 @@
 
   &__image-container {
     position: absolute;
-    left: 28%;
-    right: 28%;
+    left: 31%;
+    right: 31%;
     top: 0;
     margin: 40px 0;
-    width: 44%;
+    width: 38%;
 
     img {
       display: block;
@@ -166,60 +166,60 @@
   &__circle-item {
     position: relative;
     display: inline-block;
+    width: 10%;
     opacity: 0;
+    background-image: url(../img/feature-tag-active.png);
+    background-repeat: no-repeat;
+    background-size: 40% auto;
+    background-position: center center;
 
     transition: all 0.4s;
     -webkit-transition: all 0.4s;
     -moz-transition: all 0.4s;
     -ms-transition: all 0.4s;
-  }
-
-  &__circle-item:nth-child(1) {
-    top: 7.5%;
-    left: 47.17%;
-  }
-
-  &__circle-item:nth-child(2) {
-    top: 49.3%;
-    left: 68%;
-  }
-
-  &__circle-item:nth-child(6) {
-    top: 49.3%;
-    left: 22.5%;
-  }
-
-  &__circle-item:nth-child(3),
-  &__circle-item:nth-child(4),
-  &__circle-item:nth-child(5) {
-    top: 91.5%;
-  }
-
-  &__circle-item:nth-child(5) {
-    left: 2%;
-  }
-
-  &__circle-item:nth-child(4) {
-    left: 45.17%;
-  }
-
-  &__circle-item:nth-child(3) {
-    left: 88.3%;
-  }
-
-  &__circle-item.active {
-    width: 6%;
-    background-image: url(../img/feature-tag-active.png);
-    background-repeat: no-repeat;
-    background-size: 40% auto;
-    background-position: center center;
-    opacity: 1;
 
     &:before {
       content: "";
       display: block;
       padding: 50% 0;
     }
+  }
+
+  &__circle-item:nth-child(1) {
+    top: 5%;
+    left: 45.1%;
+  }
+
+  &__circle-item:nth-child(2) {
+    top: 46.5%;
+    left: 55.5%;
+  }
+
+  &__circle-item:nth-child(6) {
+    top: 46.5%;
+    left: -30%;
+  }
+
+  &__circle-item:nth-child(3),
+  &__circle-item:nth-child(4),
+  &__circle-item:nth-child(5) {
+    top: 89%;
+  }
+
+  &__circle-item:nth-child(5) {
+    left: -41%;
+  }
+
+  &__circle-item:nth-child(4) {
+    left: 12.5%;
+  }
+
+  &__circle-item:nth-child(3) {
+    left: 66%;
+  }
+
+  &__circle-item.active {
+    opacity: 1;
   }
 
   &__circle {
