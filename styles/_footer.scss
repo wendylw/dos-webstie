@@ -6,6 +6,7 @@
   padding: 50px 0 30px;
 
   &__text {
+    text-align: left;
     display: inline-block;
     vertical-align: middle;
     margin: 0 3px;
@@ -93,7 +94,7 @@
   }
 
   &__form-container {
-    margin: 24px 0;
+    margin: 24px 0 22px;
     font-size: 0;
   }
 
