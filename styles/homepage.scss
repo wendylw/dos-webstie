@@ -140,11 +140,11 @@
 
   &__image-container {
     position: absolute;
-    left: 31%;
-    right: 31%;
+    left: 33%;
+    right: 33%;
     top: 0;
     margin: 40px 0;
-    width: 38%;
+    width: 34%;
 
     img {
       display: block;
@@ -359,6 +359,10 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
+
+  .container {
+    max-width: 1100px;
+  }
 
   &__content {
     margin: 40px 0;
