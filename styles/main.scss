@@ -53,6 +53,10 @@ button {
   box-shadow: none;
 }
 
+.hide {
+  display: none !important;
+}
+
 .d-flex {
   display: -webkit-flex;
   display: -ms-flexbox;

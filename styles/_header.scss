@@ -1,6 +1,6 @@
 .header {
   position: fixed;
-  padding: 16px 0;
+  padding: 12px 0;
   width: 100%;
   color: $white;
   background-color: transparent;
@@ -10,7 +10,7 @@
 
   &__logo {
     display: inline-block;
-    width: 46px;
+    width: 43px;
 
     img {
       width: 100%;
@@ -22,7 +22,7 @@
   }
 
   &__list {
-    padding: 6px 0;
+    padding: 4px 0;
     margin: 0 -14px;
   }
 
