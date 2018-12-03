@@ -33,6 +33,25 @@ function activeFeaturePoint(index) {
   });
 }
 
+function client(){
+	if (window.innerHeight !== undefined) {
+		return {
+			w: window.innerWidth,
+			h: window.innerHeight
+		}
+	} else if (document.compatMode === "CSS1Compat"){
+		return {
+			w: document.documentElement.clientWidth,
+			h: document.documentElement.clientHeight
+		}
+	} else {
+		return {
+			w: document.body.clientWidth,
+			h: document.body.clientHeight
+		}
+	}
+}
+
 (function($) {
   function getBodyScrollTop() {
     var scrollTop = window.pageYOffset  //用于FF
@@ -83,5 +102,12 @@ function activeFeaturePoint(index) {
     $('.loading').addClass('hidden');
     setHeader();
     timedCount();
+
+    if (client().h > $('.banner').height()) {
+      var increaseHeight = Math.floor((client().h - $('.banner').height() - 64) / 2);
+      var paddingVertical = 150 + increaseHeight;
+
+      $('.banner .container').css('padding', paddingVertical + 'px 0');
+    }
   };
 }(jQuery));
