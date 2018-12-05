@@ -119,3 +119,46 @@
     max-width: 16px;
   }
 }
+
+@media (max-width: 992px) {
+  .footer {
+    padding: 10px 0;
+    text-align: center;
+
+    .container {
+      max-width: 410px;
+    }
+
+    .row {
+      display: block;
+    }
+
+    .col-md-4,
+    .col-md-8 {
+      float: none;
+      margin: 26px auto;
+      width: 100%;
+    }
+
+    &__social-container {
+      text-align: center;
+      padding: 0;
+    }
+
+    &__social-item {
+      display: block;
+      padding: 5px 0;
+      margin: 0 auto;
+      max-width: 200px;
+      border-bottom: 1px solid $white;
+    }
+
+    &__social-item-link img {
+      margin: 0 5px;
+    }
+
+    &__info {
+      padding-top: 0;
+    }
+  }
+}

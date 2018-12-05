@@ -105,7 +105,7 @@ function client(){
 
     if (client().h > $('.banner').height()) {
       var increaseHeight = Math.floor((client().h - $('.banner').height() - 64) / 2);
-      var paddingVertical = 150 + increaseHeight;
+      var paddingVertical = ((client().w < 768) ? 100 : 150) + increaseHeight;
 
       $('.banner .container').css('padding', paddingVertical + 'px 0');
     }

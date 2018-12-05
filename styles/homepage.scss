@@ -30,6 +30,10 @@
     font-size: $bigger-font;
     line-height: 2em;
     font-weight: normal;
+
+    br {
+      display: none;
+    }
   }
 
   &__button-container {
@@ -289,12 +293,16 @@
 .team {
   padding: 50px 0;
 
+  .col-md-3 {
+    min-height: 376px;
+  }
+
   .container {
     max-width: 1090px;
   }
 
-  &__list {
-    padding: 30px 0;
+  &__item {
+    margin: 30px 0;
   }
 
   &__image {
@@ -376,7 +384,7 @@
 
   &__time-list {
     position: relative;
-    padding: 40px 10%;
+    padding: 40px 5% 40px 15%;
   }
 
   &__time-list:after {
@@ -557,5 +565,368 @@
     background-repeat: no-repeat;
     background-size: 100% auto;
     background-position: center center;
+  }
+}
+
+@media (max-width: 1200px) {
+  .road-map {
+    &__time-list {
+      padding: 40px 0 40px 11%;
+    }
+  }
+}
+
+@media (max-width: 1100px) {
+  .banner {
+    .social-icons {
+      right: 15px;
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .team {
+    &__list {
+      .col-md-3 {
+        width: 33.333333%;
+      }
+    }
+  }
+
+  .road-map {
+    &__title {
+      font-size: $big-font;
+    }
+
+    &__item li {
+      font-size: $main-font;
+    }
+
+    &__list.after &__item li {
+      max-width: 170px;
+    }
+
+    &__list &__item:nth-child(3),
+    &__list &__item:nth-child(4) {
+      padding-top: 55px;
+
+      &:before {
+        height: 75px;
+      }
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  .features {
+    &__circle-item:nth-child(6) {
+      left: -31%;
+    }
+
+    &__circle-item:nth-child(3) {
+      left: 65%;
+    }
+
+    &__circle-item:nth-child(4) {
+      left: 12%;
+    }
+  }
+
+  .road-map {
+    &__time-list {
+      padding: 40px 0 40px 5%;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .banner {
+    background-size: cover;
+
+    .container {
+      padding: 100px 20px;
+    }
+
+    .social-icons {
+      position: static;
+    }
+
+    &__subtitle {
+      padding-bottom: 6px;
+      max-width: 320px;
+      font-size: $big-font;
+
+      br {
+        display: inline-block;
+      }
+    }
+  }
+
+  .intro {
+    padding: 30px 0;
+
+    .container {
+      padding: 0 20px;
+    }
+
+    .col-md-6 {
+      float: none;
+      width: 100%;
+    }
+
+    &__image-container {
+      margin-left: 0;
+    }
+
+    &__image {
+      margin: 0 auto;
+      max-width: 300px;
+    }
+
+    &__content-container {
+      text-align: center;
+      position: static;
+      margin: 30px auto 0;
+      max-width: 410px;
+
+      transform: translateY(0);
+      -webkit-transform: translateY(0);
+      -moz-transform: translateY(0);
+      -ms-transform: translateY(0);
+    }
+
+    &__title {
+      padding: 5px 0;
+      font-size: $bigest-font;
+    }
+
+    &__content {
+      text-align: left;
+      margin: 8px 0 18px;
+      max-width: 100%;
+    }
+  }
+
+  .features {
+    padding: 30px 0;
+
+    .row {
+      padding: 0;
+      margin: 0 auto;
+      max-width: 410px;
+    }
+
+    .col-md-3 {
+      text-align: left;
+      float: none;
+      width: 100%;
+    }
+
+    &__image-container {
+      position: relative;
+      left: 0;
+      right: 0;
+      margin: 20px auto 40px;
+      width: 250px;
+    }
+
+    &__space {
+      display: none;
+    }
+
+    &__item {
+      margin: 16px 0;
+    }
+  }
+
+  .case {
+    padding: 30px 0;
+
+    .col-md-4 {
+      float: none;
+      width: 100%;
+    }
+
+    &__list {
+      padding: 0;
+    }
+
+    &__item {
+      margin: 30px 0;
+    }
+
+    &__content {
+      max-width: 360px;
+    }
+  }
+
+  .team {
+    padding: 30px 0;
+
+    .col-md-3 {
+      width: 50%;
+    }
+  }
+
+  .advisors,
+  .investors,
+  .partners {
+    padding: 30px 0;
+
+    .row:before,
+    .row:after {
+      content: none;
+    }
+
+    .col-md-3,
+    .col-md-4 {
+      width: 50%;
+    }
+  }
+
+  .road-map {
+    &__time-line {
+      top: -40px;
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+      width: 2px;
+      height: 100%;
+      background-image: url(../img/road-map-line-mobile.png);
+    }
+
+    &__time-list {
+      padding: 40px 20px 0;
+      margin: 30px 0;
+    }
+
+    &__list {
+      position: relative;
+      padding-bottom: 190px;
+      width: 100%;
+    }
+
+    &__item {
+      display: block;
+
+      &:before {
+        height: 1px;
+        width: auto;
+      }
+
+      li {
+        display: block;
+      }
+    }
+
+    &__list &__item:nth-child(1),
+    &__list &__item:nth-child(2) {
+      padding: 0;
+      margin-left: 50%;
+      padding-left: 90px;
+
+      &:before {
+        top: 23px;
+        left: 0;
+        width: 124px;
+      }
+
+      &:after {
+        top: 8px;
+        left: -8px;
+      }
+    }
+
+    &__list &__item:nth-child(2) {
+      margin-top: 140px;
+    }
+
+    &__list &__item:nth-child(3),
+    &__list &__item:nth-child(4) {
+      position: absolute;
+      right: 50%;
+      padding: 0;
+      padding-right: 0;
+
+      transform: translateX(0%);
+      -webkit-transform: translateX(0%);
+      -moz-transform: translateX(0%);
+      -ms-transform: translateX(0%);
+
+      &:before {
+        top: 23px;
+        right: 0;
+        left: 34px;
+        height: 1px;
+      }
+
+      &:after {
+        top: 24px;
+        left: auto;
+        right: -8px;
+      }
+    }
+
+    &__list &__item:nth-child(3) {
+      top: 140px;
+    }
+
+    &__list.before &__item {
+      max-width: 190px;
+    }
+
+    &__list.after &__item {
+      max-width: 190px;
+    }
+
+    &__title:before {
+      position: static;
+      margin: 10px 0 10px 34px;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .road-map {
+    padding: 30px 0;
+
+    &__item li {
+      font-size: $small-font;
+    }
+
+    &__list.before &__item,
+    &__list.after &__item {
+      max-width: 150px;
+    }
+
+    &__list &__item:nth-child(1),
+    &__list &__item:nth-child(2) {
+      padding-left: 40px;
+
+      &:before {
+        width: 74px;
+      }
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .team,
+  .advisors,
+  .investors,
+  .partners {
+
+    .container {
+      max-width: 400px;
+    }
+
+    .row {
+      display: block;
+    }
+
+    .col-md-3,
+    .col-md-4 {
+      width: 100%;
+    }
   }
 }

@@ -53,7 +53,8 @@ button {
   box-shadow: none;
 }
 
-.hide {
+.hide,
+.desktop-hidden {
   display: none !important;
 }
 
@@ -148,6 +149,7 @@ button {
 
   &__item {
     display: block;
+    max-width: 26px;
 
     a {
       display: block;
@@ -228,7 +230,10 @@ button {
 
   img {
     position: absolute;
+    left: 0;
+    right: 0;
     top: 50%;
+    margin: auto;
     max-width: 100px;
 
     transform: translateY(-50%);
@@ -238,6 +243,61 @@ button {
 
   &.hidden {
     display: none !important;
+  }
+}
+
+@media (max-width: 767px) {
+  h1 {
+    font-size: $bigest-font;
+  }
+
+  h2 {
+    font-size: $bigger-font;
+  }
+
+  h3 {
+    font-size: $main-font;
+  }
+
+  h4 {
+    font-size: $small-font;
+  }
+
+  h5 {
+    font-size: $smaller-font;
+  }
+
+  .desktop-hidden {
+    display: block !important;
+  }
+
+  .mobile-hidden {
+    display: none;
+  }
+
+  .page-title {
+    font-size: $mobile-page-font;
+  }
+
+  .section-title {
+    padding: 14px 0;
+    font-size: $bigest-font;
+  }
+
+  .social-icons {
+    &:before {
+      content: "";
+      display: block;
+      margin: 0 auto;
+      width: 50px;
+      height: 2px;
+      background-color: $white;
+    }
+
+    &__item {
+      display: inline-block;
+      margin: 20px 5px;
+    }
   }
 }
 

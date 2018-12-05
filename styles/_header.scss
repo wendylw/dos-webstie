@@ -10,7 +10,7 @@
 
   &__logo {
     display: inline-block;
-    width: 43px;
+    max-width: 43px;
 
     img {
       width: 100%;
@@ -51,6 +51,23 @@
     .container {
       padding-left: 24px;
       padding-right: 24px;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .header {
+    &__logo {
+      display: none;
+      // position: absolute;
+      // left: 0;
+      // right: 0;
+      // margin: 0 auto;
+      // max-width: 90px;
+    }
+
+    &__nav {
+      display: none;
     }
   }
 }
