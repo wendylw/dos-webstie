@@ -52,6 +52,29 @@ function client(){
 	}
 }
 
+function setTeam() {
+  if (client().w < 480) {
+    var itemWidth = $('.team__item').width();
+    var teamLength = $('.team').find('.team__item').length;
+    var investorsLength = $('.investors').find('.team__item').length;
+    var partnersLength = $('.partners').find('.team__item').length;
+
+    $('.team .team__list').css('width', itemWidth * teamLength + 'px');
+    $('.investors .team__list').css('width', itemWidth * investorsLength + 'px');
+    $('.partners .team__list').css('width', itemWidth * partnersLength + 'px');
+
+    $('.team__item').css({
+      'width': itemWidth,
+      'display': 'inline-block'
+    });
+  } else {
+    $('.team .team__list').attr('style', '');
+    $('.investors .team__list').attr('style', '');
+    $('.partners .team__list').attr('style', '');
+    $('.team__item').attr('style', '');
+  }
+}
+
 (function($) {
   function getBodyScrollTop() {
     var scrollTop = window.pageYOffset  //用于FF
@@ -69,12 +92,22 @@ function client(){
     if (newScrollTop >= bannerHeight && !$('.header').hasClass('white')) {
       $('.header').addClass('white');
       $('.header').removeClass('black');
+      $('.header__mobile-nav img').attr('src', './img/nav-black.png');
+      if (!$('.header__logo').hasClass('normal')) {
+        $('.header__logo').addClass('normal');
+      }
     } else if (newScrollTop < bannerHeight && newScrollTop > 0 && !$('.header').hasClass('black')) {
       $('.header').addClass('black');
       $('.header').removeClass('white');
+      $('.header__mobile-nav img').attr('src', './img/nav.png');
+      if (!$('.header__logo').hasClass('normal')) {
+        $('.header__logo').addClass('normal');
+      }
     } else if (newScrollTop <= 0) {
       $('.header').removeClass('black');
       $('.header').removeClass('white');
+      $('.header__mobile-nav img').attr('src', './img/nav.png');
+      $('.header__logo').removeClass('normal');
     }
   }
 
@@ -98,6 +131,10 @@ function client(){
     setHeader();
   });
 
+  $(window).resize(function() {
+    setTeam();
+  });
+
   window.onload = function () {
     $('.loading').addClass('hidden');
     setHeader();
@@ -109,5 +146,7 @@ function client(){
 
       $('.banner .container').css('padding', paddingVertical + 'px 0');
     }
+
+    setTeam();
   };
 }(jQuery));

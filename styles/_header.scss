@@ -57,17 +57,51 @@
 
 @media (max-width: 767px) {
   .header {
+    min-height: 38px;
+    padding: 10px 0;
+
     &__logo {
-      display: none;
-      // position: absolute;
-      // left: 0;
-      // right: 0;
-      // margin: 0 auto;
-      // max-width: 90px;
+      position: absolute;
+      left: 50%;
+      margin: 40px auto;
+      max-width: 90px;
+
+      transform: translateX(-50%);
+      -webkit-transform: translateX(-50%);
+      -moz-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+
+      transition: all 0.7s;
+      -webkit-transition: all 0.7s;
+      -moz-transition: all 0.7s;
+      -ms-transition: all 0.7s;
+    }
+
+    &__logo.normal {
+      position: relative;
+      margin: 0;
+      left: 0;
+      max-width: 43px;
+
+      transform: translateX(0);
+      -webkit-transform: translateX(0);
+      -moz-transform: translateX(0);
+      -ms-transform: translateX(0);
     }
 
     &__nav {
       display: none;
+    }
+
+    &__mobile-nav {
+      float: right;
+      display: inline-block !important;
+      padding: 10px 0;
+      text-align: right;
+
+      img {
+        max-width: 30px;
+      }
     }
   }
 }

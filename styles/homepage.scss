@@ -916,8 +916,9 @@
   .investors,
   .partners {
 
-    .container {
+    .mobile-container {
       max-width: 400px;
+      overflow-x: auto;
     }
 
     .row {
@@ -927,6 +928,14 @@
     .col-md-3,
     .col-md-4 {
       width: 100%;
+    }
+  }
+
+  .advisors,
+  .investors,
+  .partners {
+    .team__list {
+      font-size: 0;
     }
   }
 }
