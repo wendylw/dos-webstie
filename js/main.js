@@ -127,6 +127,14 @@ function setTeam() {
     timedCount();
   });
 
+  $('.header__mobile-nav').on('click', function() {
+    $('.mobile-nav').toggleClass('show');
+  });
+
+  $('.mobile-nav__close').on('click', function() {
+    $('.mobile-nav').toggleClass('show');
+  });
+
   $( window ).scroll(function() {
     setHeader();
   });

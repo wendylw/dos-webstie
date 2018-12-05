@@ -77,6 +77,10 @@
       -ms-transition: all 0.7s;
     }
 
+    &__nav {
+      display: none;
+    }
+
     &__logo.normal {
       position: relative;
       margin: 0;
@@ -89,10 +93,6 @@
       -ms-transform: translateX(0);
     }
 
-    &__nav {
-      display: none;
-    }
-
     &__mobile-nav {
       float: right;
       display: inline-block !important;
@@ -102,6 +102,45 @@
       img {
         max-width: 30px;
       }
+    }
+  }
+
+  .mobile-nav {
+    display: none !important;
+    position: fixed;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    color: $white;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 30;
+
+    &.show {
+      display: block !important;
+    }
+
+    &__close {
+      padding: 20px;
+    }
+
+    .header__nav {
+      display: block;
+      width: 100%;
+      height: 100%;
+      float: none;
+
+      li {
+        display: block;
+      }
+    }
+
+    .header__list {
+      margin: 0;
+    }
+
+    .header__item-link {
+      padding: 20px;
     }
   }
 }
