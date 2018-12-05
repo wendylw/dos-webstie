@@ -701,7 +701,7 @@
     }
 
     &__content {
-      text-align: center;
+      text-align: left;
       margin: 8px 0 18px;
       max-width: 100%;
     }
@@ -717,7 +717,7 @@
     }
 
     .col-md-3 {
-      text-align: center;
+      text-align: left;
       float: none;
       width: 100%;
     }
@@ -784,6 +784,11 @@
 
     .col-md-3 {
       width: 50%;
+    }
+
+    &__image img {
+      margin: 0 auto;
+      width: 80%;
     }
   }
 

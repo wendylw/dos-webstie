@@ -54,7 +54,7 @@ function client(){
 
 function setTeam() {
   if (client().w < 480) {
-    var itemWidth = $('.team__item').width() * 0.75;
+    var itemWidth = $('.team__item').width() * 0.58;
     var teamLength = $('.team').find('.team__item').length;
     var investorsLength = $('.investors').find('.team__item').length;
     var partnersLength = $('.partners').find('.team__item').length;
