@@ -150,11 +150,13 @@ function setTeam() {
 
     var $links = $('.header__item-link');
 
-    $.each($links, function(index, item) {
-      var itemWidth = $(item).width() + 10;
+    if (client().w > 767) {
+      $.each($links, function(index, item) {
+        var itemWidth = $(item).width() + 10;
 
-      $(item).css('width', itemWidth);
-    });
+        $(item).css('width', itemWidth);
+      });
+    }
 
     if (client().h > $('.banner').height()) {
       var increaseHeight = Math.floor((client().h - $('.banner').height() - 64) / 2);
