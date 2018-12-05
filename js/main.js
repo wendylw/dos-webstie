@@ -54,7 +54,7 @@ function client(){
 
 function setTeam() {
   if (client().w < 480) {
-    var itemWidth = $('.team__item').width();
+    var itemWidth = $('.team__item').width() * 0.75;
     var teamLength = $('.team').find('.team__item').length;
     var investorsLength = $('.investors').find('.team__item').length;
     var partnersLength = $('.partners').find('.team__item').length;
@@ -147,6 +147,14 @@ function setTeam() {
     $('.loading').addClass('hidden');
     setHeader();
     timedCount();
+
+    var $links = $('.header__item-link');
+
+    $.each($links, function(index, item) {
+      var itemWidth = $(item).width() + 10;
+
+      $(item).css('width', itemWidth);
+    });
 
     if (client().h > $('.banner').height()) {
       var increaseHeight = Math.floor((client().h - $('.banner').height() - 64) / 2);

@@ -31,9 +31,14 @@
   }
 
   &__item-link {
+    text-align: center;
     display: block;
     padding: 6px 14px;
     font-size: $big-font;
+
+    &:hover {
+      font-weight: bold;
+    }
   }
 
   &.white {
