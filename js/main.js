@@ -131,7 +131,7 @@ function setTeam() {
     $('.mobile-nav').toggleClass('show');
   });
 
-  $('.mobile-nav__close').on('click', function() {
+  $('.mobile-nav__close, .header__item-link').on('click', function() {
     $('.mobile-nav').toggleClass('show');
   });
 
