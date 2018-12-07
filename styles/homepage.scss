@@ -384,7 +384,7 @@
 
   &__time-list {
     position: relative;
-    padding: 40px 5% 40px 15%;
+    padding: 40px 7% 40px 12%;
   }
 
   &__time-list:after {
@@ -429,9 +429,8 @@
 
     li {
       position: relative;
-      display: inline-block;
       padding-left: 12px;
-      font-size: $big-font;
+      font-size: $main-font;
       line-height: 1.5em;
       color: $light-gray;
 
@@ -571,7 +570,7 @@
 @media (max-width: 1200px) {
   .road-map {
     &__time-list {
-      padding: 40px 0 40px 11%;
+      padding: 40px 5% 40px 9%;
     }
   }
 }
