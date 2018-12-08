@@ -10,7 +10,7 @@
 
   .container {
     position: relative;
-    padding: 150px 0;
+    padding: 50px 0;
   }
 
   .social-icons {
@@ -20,6 +20,10 @@
   }
 
   .hide {
+    display: none;
+  }
+
+  &__logo {
     display: none;
   }
 
@@ -650,6 +654,10 @@
       position: static;
     }
 
+    &__logo {
+      display: block;
+    }
+
     &__subtitle {
       padding-bottom: 6px;
       max-width: 320px;
@@ -787,7 +795,7 @@
 
     &__image img {
       margin: 0 auto;
-      width: 80%;
+      width: 90%;
     }
   }
 
