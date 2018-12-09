@@ -93,26 +93,14 @@ function setTeam() {
       $('.header').addClass('white');
       $('.header').removeClass('black');
       $('.header__mobile-nav img').attr('src', './img/nav-black.png');
-      if (client().w < 768) {
-        $('.banner__logo').hide();
-        $('.header__logo').show();
-      }
     } else if (newScrollTop < bannerHeight && newScrollTop > 0 && !$('.header').hasClass('black')) {
       $('.header').addClass('black');
       $('.header').removeClass('white');
       $('.header__mobile-nav img').attr('src', './img/nav.png');
-      if (client().w < 768) {
-        $('.banner__logo').hide();
-        $('.header__logo').show();
-      }
     } else if (newScrollTop <= 0) {
       $('.header').removeClass('black');
       $('.header').removeClass('white');
       $('.header__mobile-nav img').attr('src', './img/nav.png');
-      if (client().w < 768) {
-        $('.banner__logo').show();
-        $('.header__logo').hide();
-      }
     }
   }
 

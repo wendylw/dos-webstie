@@ -5,6 +5,10 @@
   background-color: $black;
   padding: 50px 0 30px;
 
+  .clear {
+    display: inline-block;
+  }
+
   &__text {
     text-align: left;
     display: inline-block;
