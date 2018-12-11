@@ -52,6 +52,11 @@
     font-size: $big-font;
     border-radius: 20px;
     font-weight: bold;
+
+    &:hover {
+      color: $black;
+      background-color: $white;
+    }
   }
 }
 
@@ -974,6 +979,14 @@
   .advisors {
     .team__list {
       text-align: center;
+    }
+  }
+}
+
+@media (max-height: 700px) and (min-width: 768px) {
+  .banner {
+    &__button-container {
+      padding: 0;
     }
   }
 }
