@@ -120,6 +120,10 @@ function setTeam() {
     timedCount();
   });
 
+  $('.header__logo').on('click', function() {
+    $('html,body').animate({scrollTop: 0}, 400);
+  });
+
   $('.header__mobile-nav').on('click', function() {
     $('.mobile-nav').toggleClass('show');
   });
@@ -135,6 +139,21 @@ function setTeam() {
 
     $('html,body').animate({scrollTop: ($($(this).data('target')).offset().top -50 )}, 1000);
   });
+
+  $('.social-icons__item a').on({
+    mouseenter: function() {
+      var src = $(this).find('img').attr('src').split('.png');
+
+      src.push('-hover.png');
+
+      $(this).find('img').attr('src', src.join(''));
+    },
+    mouseleave: function() {
+      var src = $(this).find('img').attr('src').split('-hover');
+
+      $(this).find('img').attr('src', src.join(''));
+    }
+});
 
   $( window ).scroll(function() {
     setHeader();
