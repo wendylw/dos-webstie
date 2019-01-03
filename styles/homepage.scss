@@ -21,6 +21,39 @@
     &__item a:hover {
       background-color: $white;
     }
+
+    &__item {
+      position: relative;
+    }
+
+    &__telegram {
+      display: none;
+      position: absolute;
+      text-align: left;
+      top: 0;
+      right: 26px;
+      padding: 0 10px;
+
+      ul {
+        padding: 5px 15px;
+        min-width: 150px;
+        border: 1px solid $white;
+        background-color: $black;
+      }
+
+      a {
+        font-size: 1rem;
+        border: 0;
+      }
+
+      a:hover {
+        background-color: transparent;
+      }
+
+      img {
+        margin: 0 2px;
+      }
+    }
   }
 
   .hide {
@@ -318,12 +351,17 @@
     margin: 30px 0;
   }
 
+  &__image-link {
+    display: block;
+  }
+
   &__image {
     margin: 0 auto;
     max-width: 200px;
 
     img {
       width: 100%;
+      border-radius: 50%;
     }
   }
 
@@ -580,6 +618,75 @@
   }
 }
 
+.faq {
+  padding: 50px 0;
+
+  p {
+    margin: 0;
+    line-height: 1.5em;
+  }
+
+  .container {
+    max-width: 900px;
+  }
+
+  .faq__margin-top {
+    margin-top: 10px;
+  }
+
+  .faq__margin-bottom {
+    margin-bottom: 10px;
+  }
+
+  &__number-list {
+    padding-left: 15px;
+    list-style: decimal;
+  }
+
+  &__lower-latin-list {
+    padding-left: 15px;
+    list-style: lower-latin;
+  }
+
+  &__title {
+    padding: 20px 10px;
+    border-bottom: 1px solid $lightest-gray;
+    margin: 0;
+    cursor: pointer;
+  }
+
+  &__title-text {
+    margin: 0;
+    display: inline-block;
+  }
+
+  &__title-icon {
+    float: right;
+    margin: 4px 0;
+    max-height: 16px;
+
+    transition: all 0.4s;
+  }
+
+  &__content {
+    display: none;
+    padding: 20px 15px;
+
+    li ~ li {
+      margin-top: 10px;
+    }
+  }
+
+  &__item.active {
+    .faq__title-icon {
+      transform: rotateZ(180deg);
+      -webkit-transform: rotateZ(180deg);
+      -moz-transform: rotateZ(180deg);
+      -ms-transform: rotateZ(180deg);
+    }
+  }
+}
+
 @media (max-width: 1200px) {
   .road-map {
     &__time-list {
@@ -661,6 +768,13 @@
 
     .social-icons {
       position: static;
+
+      &__telegram {
+        top: 36px;
+        left: 0;
+        right: auto;
+        padding: 10px 0;
+      }
     }
 
     &__logo {

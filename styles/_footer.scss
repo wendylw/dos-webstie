@@ -51,20 +51,34 @@
   }
 
   &__social-item {
-    vertical-align: middle;
+    vertical-align: top;
+    text-align: left;
     font-size: 0;
     display: inline-block;
+
+    span {
+      line-height: 16px;
+    }
   }
 
   &__social-item-link {
     display: block;
     padding: 5px 10px;
+  }
 
-    img {
-      vertical-align: middle;
-      margin: 0 2px;
-      height: 16px;
-    }
+  &__more-link {
+    padding-left: 32px;
+  }
+
+  &__more-image {
+    margin: 0 2px;
+    height: 12px;
+  }
+
+  &__social-image {
+    vertical-align: middle;
+    margin: 0 2px;
+    height: 16px;
   }
 
   &__info {

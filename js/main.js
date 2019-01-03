@@ -141,18 +141,29 @@ function setTeam() {
   });
 
   $('.social-icons__item a').on({
-    mouseenter: function() {
-      var src = $(this).find('img').attr('src').split('.png');
+    mouseenter: function(e) {
+      var src = $(this).find('.banner__social-image').attr('src').split('.png');
 
       src.push('-hover.png');
 
-      $(this).find('img').attr('src', src.join(''));
+      $(this).find('.banner__social-image').attr('src', src.join(''));
     },
     mouseleave: function() {
-      var src = $(this).find('img').attr('src').split('-hover');
+      var src = $(this).find('.banner__social-image').attr('src').split('-hover');
 
-      $(this).find('img').attr('src', src.join(''));
+      $(this).find('.banner__social-image').attr('src', src.join(''));
     }
+});
+
+$('.social-icons__telegram-container').on('click', function() {
+  $('.social-icons__telegram').toggle();
+});
+
+$('.faq__title').on('click', function(e) {
+  e.stopPropagation();
+
+  $(this).parent('.faq__item').toggleClass('active');
+  $(this).next('.faq__content').slideToggle();
 });
 
   $( window ).scroll(function() {
