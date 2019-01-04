@@ -375,6 +375,20 @@
 
   &__name {
     margin: 14px 0 8px;
+
+    span {
+      font-size: 1em;
+    }
+  }
+
+  &__linkedin {
+    display: inline-block;
+    margin: 0 2px;
+    font-size: 0;
+
+    img {
+      max-width: 16px;
+    }
   }
 
   &__title {
