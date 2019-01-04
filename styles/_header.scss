@@ -11,6 +11,7 @@
   &__logo {
     display: inline-block;
     max-width: 43px;
+    cursor: pointer;
 
     img {
       width: 100%;
@@ -49,6 +50,11 @@
   &.black {
     background-color: rgba(0, 0, 0, 0.8);
   }
+}
+
+.header.header-faq {
+  color: $main-color;
+  background-color: rgba(255, 255, 255, 0.8);
 }
 
 @media (max-width: 1200px) {
