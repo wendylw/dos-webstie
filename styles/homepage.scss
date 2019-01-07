@@ -361,7 +361,6 @@
 
     img {
       width: 100%;
-      border-radius: 50%;
     }
   }
 
@@ -387,8 +386,7 @@
 }
 
 .advisors,
-.investors,
-.partners {
+.investors {
   padding: 50px 0;
 
   .container {
@@ -408,6 +406,15 @@
 
   .team__item {
     float: none;
+  }
+}
+
+.partners {
+  .team__image-link {
+    padding: 50% 0;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center center;
   }
 }
 
