@@ -75,6 +75,15 @@ function setTeam() {
   }
 }
 
+function banner() {
+  if (client().h > $('.banner').height()) {
+    var increaseHeight = Math.floor((client().h - $('.banner').height() - 64) / 2);
+    var paddingVertical = ((client().w < 768) ? 100 : 50) + increaseHeight;
+
+    $('.banner .container').css('padding', paddingVertical + 'px 0');
+  }
+}
+
 (function($) {
   function getBodyScrollTop() {
     var scrollTop = window.pageYOffset  //用于FF
@@ -142,6 +151,10 @@ function setTeam() {
 
   $('.social-icons__item a').on({
     mouseenter: function(e) {
+      if ($(this).find('.banner__social-image').length === 0) {
+        return;
+      }
+
       var src = $(this).find('.banner__social-image').attr('src').split('.png');
 
       src.push('-hover.png');
@@ -149,6 +162,10 @@ function setTeam() {
       $(this).find('.banner__social-image').attr('src', src.join(''));
     },
     mouseleave: function() {
+      if ($(this).find('.banner__social-image').length === 0) {
+        return;
+      }
+
       var src = $(this).find('.banner__social-image').attr('src').split('-hover');
 
       $(this).find('.banner__social-image').attr('src', src.join(''));
@@ -157,6 +174,12 @@ function setTeam() {
 
 $('.social-icons__telegram-container').on('click', function() {
   $('.social-icons__telegram').toggle();
+});
+
+$('body').on('click', function(e) {
+  if ($( e.target ).closest('.social-icons__telegram-container').length <= 0 ) {
+    $('.social-icons__telegram').toggle();
+  }
 });
 
 $('.faq__title').on('click', function(e) {
@@ -189,12 +212,7 @@ $('.faq__title').on('click', function(e) {
       });
     }
 
-    if (client().h > $('.banner').height()) {
-      var increaseHeight = Math.floor((client().h - $('.banner').height() - 64) / 2);
-      var paddingVertical = ((client().w < 768) ? 100 : 50) + increaseHeight;
-
-      $('.banner .container').css('padding', paddingVertical + 'px 0');
-    }
+    banner();
 
     setTeam();
   };

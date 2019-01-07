@@ -84,7 +84,7 @@
   &__button {
     display: inline-block;
     padding: 8px 20px;
-    margin: 0 15px;
+    margin: 5px 10px;
     border: 1px solid $white;
     font-size: $big-font;
     border-radius: 20px;
@@ -374,6 +374,20 @@
 
   &__name {
     margin: 14px 0 8px;
+
+    span {
+      font-size: 1em;
+    }
+  }
+
+  &__linkedin {
+    display: inline-block;
+    margin: 10px 2px 0;
+    font-size: 0;
+
+    img {
+      max-width: 16px;
+    }
   }
 
   &__title {
