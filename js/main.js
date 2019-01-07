@@ -121,12 +121,7 @@ function setTeam() {
   });
 
   $('.header__logo').on('click', function() {
-    if ($(this).data('target') !== 'page') {
-      $('html,body').animate({scrollTop: 0}, 400);
-    } else {
-      window.location = './index.html';
-    }
-
+    $('html,body').animate({scrollTop: 0}, 400);
   });
 
   $('.header__mobile-nav').on('click', function() {
@@ -142,11 +137,7 @@ function setTeam() {
   $('.header__item-link').click(function(e){
     e.preventDefault();
 
-    if ($(this).data('target') !== 'page') {
-      $('html,body').animate({scrollTop: ($($(this).data('target')).offset().top -50 )}, 1000);
-    } else {
-      window.location = $(this).attr('href');
-    }
+    $('html,body').animate({scrollTop: ($($(this).data('target')).offset().top -50 )}, 1000);
   });
 
   $('.social-icons__item a').on({
@@ -168,12 +159,12 @@ $('.social-icons__telegram-container').on('click', function() {
   $('.social-icons__telegram').toggle();
 });
 
-// $('.faq__title').on('click', function(e) {
-//   e.stopPropagation();
+$('.faq__title').on('click', function(e) {
+  e.stopPropagation();
 
-//   $(this).parent('.faq__item').toggleClass('active');
-//   $(this).next('.faq__content').slideToggle();
-// });
+  $(this).parent('.faq__item').toggleClass('active');
+  $(this).next('.faq__content').slideToggle('fast');
+});
 
   $( window ).scroll(function() {
     setHeader();

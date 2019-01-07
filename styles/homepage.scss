@@ -626,7 +626,7 @@
 }
 
 .faq {
-  padding: 110px 0 50px;
+  padding: 50px 0;
 
   p {
     margin: 0;
@@ -635,6 +635,10 @@
 
   .container {
     max-width: 900px;
+  }
+
+  .section-title {
+    padding-top: 0;
   }
 
   .faq__margin-top {
@@ -657,7 +661,7 @@
 
   &__title {
     padding: 20px 10px;
-    border-bottom: 1px solid $lightest-gray;
+    border-top: 1px solid $lightest-gray;
     margin: 0;
     cursor: pointer;
   }
@@ -676,6 +680,7 @@
   }
 
   &__content {
+    display: none;
     padding: 20px 15px;
 
     li ~ li {
@@ -1043,6 +1048,10 @@
       position: static;
       margin: 10px 0 10px 34px;
     }
+  }
+
+  .faq {
+    padding: 30px 0;
   }
 }
 

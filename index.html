@@ -70,7 +70,7 @@
             <a class="header__item-link" href="javascript:void(0)" data-target="">Testnet</a>
           </li>
           <li class="header__item">
-            <a class="header__item-link" href="./faq.html" data-target="page">FAQ</a>
+            <a class="header__item-link" href="javascript:void(0)" data-target="#faq">FAQ</a>
           </li>
           <li class="header__item">
             <a class="header__item-link" href="javascript:void(0)" data-target="#contact-us">Contact us</a>
@@ -111,7 +111,7 @@
             <a class="header__item-link" href="javascript:void(0)" data-target="">Testnet</a>
           </li>
           <li class="header__item">
-            <a class="header__item-link" href="./faq.html" data-target="page">FAQ</a>
+            <a class="header__item-link" href="javascript:void(0)" data-target="#faq">FAQ</a>
           </li>
           <li class="header__item">
             <a class="header__item-link" href="javascript:void(0)" data-target="#contact-us">Contact us</a>
@@ -593,13 +593,14 @@
     <!-- end of road map -->
 
     <!-- FAQ -->
-    <!-- <section class="faq" id="faq">
+    <section class="faq" id="faq">
       <div class="container">
+        <h2 class="section-title text-center">FAQ</h2>
         <ul>
           <li class="faq__item">
             <div class="faq__title">
               <h3 class="faq__title-text">What is DOS Network</h3>
-              <img class="faq__title-icon" src="./img/collaspe.png" alt="">
+              <!-- <img class="faq__title-icon" src="./img/collaspe.png" alt=""> -->
             </div>
             <div class="faq__content">
               <p>DOS Network is a scalable layer-2 protocol that offers decentralized data feed oracle and decentralized verifiable computation oracle to mainstream blockchains. It connects on-chain smart contracts to off-chain internet data, also supplies unlimited verifiable computation power to blockchains, enabling more commercial applications with real world use cases.</p>
@@ -608,7 +609,7 @@
           <li class="faq__item">
             <div class="faq__title">
               <h3 class="faq__title-text">What is the role and value of DOS Network (What problems can DOS Network solve?)</h3>
-              <img class="faq__title-icon" src="./img/collaspe.png" alt="">
+              <!-- <img class="faq__title-icon" src="./img/collaspe.png" alt=""> -->
             </div>
             <div class="faq__content">
               <p class="faq__margin-bottom">Due to the inherent limitation of existing blockchains’ consensus mechanisms and their deterministic virtual machines, currently there are two biggest issues hindering the widespread adoption of smart contracts and the emergence of large-scale commercial </p>
@@ -636,7 +637,7 @@
           <li class="faq__item">
             <div class="faq__title">
               <h3 class="faq__title-text">What are the advantages and features of DOS Network?</h3>
-              <img class="faq__title-icon" src="./img/collaspe.png" alt="">
+              <!-- <img class="faq__title-icon" src="./img/collaspe.png" alt=""> -->
             </div>
             <div class="faq__content">
               <ul>
@@ -652,7 +653,7 @@
           <li class="faq__item">
             <div class="faq__title">
               <h3 class="faq__title-text">What is the structure of DOS Network system?</h3>
-              <img class="faq__title-icon" src="./img/collaspe.png" alt="">
+              <!-- <img class="faq__title-icon" src="./img/collaspe.png" alt=""> -->
             </div>
             <div class="faq__content">
               <p>DOS Network system is partitioned into two layers with several key components:</p>
@@ -663,7 +664,7 @@
           <li class="faq__item">
             <div class="faq__title">
               <h3 class="faq__title-text">Who can join DOS Network? Why do they want to join DOS Network?</h3>
-              <img class="faq__title-icon" src="./img/collaspe.png" alt="">
+              <!-- <img class="faq__title-icon" src="./img/collaspe.png" alt=""> -->
             </div>
             <div class="faq__content">
               <p>The off-chain part is a stateless P2P network. This is a Layer 2 network that can support all mainstream blockchains. Anyone can join the network as long as he mortgages a certain amount of tokens and then runs the node's client. After joining the network, you can provide services for users and earn service fees. In addition, in order to stimulate the network cold start, we also introduced the mining mechanism. We reserved 30% of the total token as the reward of network cold start mining. The node operator can obtain the mining reward after joining the network through the mortgaged token.</p>
@@ -672,7 +673,7 @@
           <li class="faq__item">
             <div class="faq__title">
               <h3 class="faq__title-text">What application scenarios can DOS Network be used in?</h3>
-              <img class="faq__title-icon" src="./img/collaspe.png" alt="">
+              <!-- <img class="faq__title-icon" src="./img/collaspe.png" alt=""> -->
             </div>
             <div class="faq__content">
               <p class="faq__margin-bottom">The DOS Network can be used by all applications that need to access out-of-chain data. For example:</p>
@@ -689,7 +690,7 @@
           <li class="faq__item">
             <div class="faq__title">
               <h3 class="faq__title-text">Do you have your own tokens in this system? What role does it play?</h3>
-              <img class="faq__title-icon" src="./img/collaspe.png" alt="">
+              <!-- <img class="faq__title-icon" src="./img/collaspe.png" alt=""> -->
             </div>
             <div class="faq__content">
               <p>We have our own token. The node operator joins the network by mortgaging a certain amount of tokens to provide services to users. Users need to pay tokens to these node operators when they need services. At the same time, users also need to pay tokens to the paid data provider after we go online in the future.</p>
@@ -698,7 +699,7 @@
           <li class="faq__item">
             <div class="faq__title">
               <h3 class="faq__title-text">How does the DOS Network guarantee that the returned data is authentic?</h3>
-              <img class="faq__title-icon" src="./img/collaspe.png" alt="">
+              <!-- <img class="faq__title-icon" src="./img/collaspe.png" alt=""> -->
             </div>
             <div class="faq__content">
               <p>We use off-chain network consensus to ensure that Oracle has not tampered with the data. Our sub-network is an open peer-to-peer network, which realizes the consensus based on VRF. The random number generated by VRF randomly selects the working group in the network, and the nodes in the group respectively obtain data. When there are more than half of the nodes obtaining the same data, an effective result can be generated and returned the results to the blockchain.</p>
@@ -707,7 +708,7 @@
           <li class="faq__item">
             <div class="faq__title">
               <h3 class="faq__title-text">How is the development progress of the project now?</h3>
-              <img class="faq__title-icon" src="./img/collaspe.png" alt="">
+              <!-- <img class="faq__title-icon" src="./img/collaspe.png" alt=""> -->
             </div>
             <div class="faq__content">
               <p>The alpha version of the test network has just been released on the Testnet of Ethereum. Developers can already obtain the data outside the chain through the interface provided by us on the Ethernet Testnet. In the future, we will release a beta version of the test network in February, 2019, which will include all the features. We will launch Mainnet in May, 2019.</p>
@@ -716,7 +717,7 @@
           <li class="faq__item">
             <div class="faq__title">
               <h3 class="faq__title-text">Where can I learn more about DOS Network?</h3>
-              <img class="faq__title-icon" src="./img/collaspe.png" alt="">
+              <!-- <img class="faq__title-icon" src="./img/collaspe.png" alt=""> -->
             </div>
             <div class="faq__content">
               <p class="faq__margin-bottom">To learn more about DOS Network or to discuss questions of our project, feel free to connect with us through any of our official channels below:</p>
@@ -732,7 +733,7 @@
           </li>
         </ul>
       </div>
-    </section> -->
+    </section>
     <!-- end of FAQ -->
   </div>
   <!-- end of Add your site or application content here -->
