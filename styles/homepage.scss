@@ -108,6 +108,7 @@
   &__title {
     padding: 10px 0;
     margin: 0;
+    max-width: 400px;
     font-size: $title-font;
     text-transform: uppercase;
   }
@@ -340,7 +341,7 @@
   padding: 50px 0;
 
   .col-md-3 {
-    min-height: 376px;
+    min-height: 390px;
   }
 
   .container {
