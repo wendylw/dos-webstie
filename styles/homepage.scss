@@ -425,8 +425,16 @@
 }
 
 .partners {
+  .mobile-container {
+    padding-bottom: 50px;
+  }
+
+  .team__item {
+    margin: 10px 0;
+  }
+
   .team__image-link {
-    padding: 50% 0;
+    padding: 30% 0;
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center center;
@@ -961,6 +969,12 @@
     .col-md-3,
     .col-md-4 {
       width: 50%;
+    }
+  }
+
+  .partners {
+    .mobile-container {
+      padding-bottom: 30px;
     }
   }
 
