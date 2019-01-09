@@ -625,7 +625,7 @@
         <ul>
           <li class="faq__item">
             <div class="faq__title">
-              <h3 class="faq__title-text">What is DOS Network</h3>
+              <h3 class="faq__title-text">What is DOS Network?</h3>
               <!-- <img class="faq__title-icon" src="./img/collaspe.png" alt=""> -->
             </div>
             <div class="faq__content">
@@ -634,46 +634,18 @@
           </li>
           <li class="faq__item">
             <div class="faq__title">
-              <h3 class="faq__title-text">What is the role and value of DOS Network (What problems can DOS Network solve?)</h3>
+              <h3 class="faq__title-text">What problems can DOS Network solve?</h3>
               <!-- <img class="faq__title-icon" src="./img/collaspe.png" alt=""> -->
             </div>
             <div class="faq__content">
-              <p class="faq__margin-bottom">Due to the inherent limitation of existing blockchains’ consensus mechanisms and their deterministic virtual machines, currently there are two biggest issues hindering the widespread adoption of smart contracts and the emergence of large-scale commercial </p>
+              <p class="faq__margin-bottom">Due to the inherent limitation of existing blockchains’ consensus mechanisms and their deterministic virtual machines, currently there are two biggest issues hindering the widespread adoption of smart contracts and the emergence of large-scale commercial Dapps：</p>
               <div>
-                <label>Dapps:</label>
-                <ul class="faq__number-list">
-                  <li>
-                    <p>The smart contract on blockchain is a closed and deterministic system and the execution of the smart contract program at any node must have the same deterministic result, so smart contract cannot allow I/O communication with the outside world. Otherwise, the certainty of the execution result cannot be guaranteed, and the blockchain consensus system cannot be achieved. Smart contracts can only get data from closed systems on the chain.</p>
-                  </li>
-                  <li>
-                    <p class="faq__margin-bottom">There are many resource limitations resulting in the inability to perform complex calculations in smart contracts:</p>
-                    <ul class="faq__lower-latin-list">
-                      <li><strong>Time resources:</strong> Smart contracts must be executed within a single block time. Ethereum's block time is about 14 seconds now, EOS is about 0.5 seconds, and normally complex calculations can't be completed in such a short period of time. This is a limitation of time resources.</li>
-                      <li><strong>Near real-time and verifiable result:</strong> Driven by the secure randomness engine built upon Verifiable Random Function (VRF) and advanced cryptographic primitives, the data request or computation is performed and consented off-chain but verifiable on-chain in a system contract. The delay between receiving request and delivering back response is within two blocks - the optimal one can achieve in theory.</li>
-                      <li><strong>Pace resources:</strong> Some complex calculations often require a large number of intermediate results, while the space resources on the blockchain are limited and cannot store such a large number of intermediate results. This is a limitation of space resources.</li>
-                      <li><strong>Costly:</strong> At present, the execution of smart contracts in Ethereum requires consumption of gas, and the amount of gas consumed by complex calculations is high, which is very expensive. In addition, there is a block gas limit on Ethereum, which means that the total amount of gas consumed on a block is limited. At present, it is around 8 million. As a result, the gas that needs to be consumed for some particularly complicated calculations may exceed this limit and cannot be completed at all.</li>
-                      <li><strong>The verifier's dilemma:</strong> When the calculations in the block are complex and the verifier needs to consume a lot of resources for computational verification, then he will be at a disadvantage in the block operation. And if he does not verify the received block, then he may perform the block operation on a wrong fork, thus falling into a dilemma that it is difficult to make a profit. So we think that the most appropriate way for complex calculations is to delegate to the outside of the chain to complete.</li>
-                    </ul>
-                    <p class="faq__margin-top">The role and value of DOS Network is to solve these two problems making same amount of effort to enrich smart contracts and decentralized economy with real world events and more computing powers before blockchain hits mass adoption.</p>
-                  </li>
+                <ul class="faq__lower-latin-list">
+                  <li>The smart contract on blockchain is a closed and deterministic system and the execution of the smart contract program at any node must have the same deterministic result, so smart contract cannot allow I/O communication with the outside world. Otherwise, the certainty of the execution result cannot be guaranteed, and the blockchain consensus system cannot be achieved. Smart contracts can only get data from closed systems on the chain.</li>
+                  <li>There are many resource limitations resulting in the inability to perform complex calculations in smart contracts.</li>
                 </ul>
               </div>
-            </div>
-          </li>
-          <li class="faq__item">
-            <div class="faq__title">
-              <h3 class="faq__title-text">What are the advantages and features of DOS Network?</h3>
-              <!-- <img class="faq__title-icon" src="./img/collaspe.png" alt=""> -->
-            </div>
-            <div class="faq__content">
-              <ul>
-                <li><strong>Byzantine fault-tolerant decentralized protocol:</strong> A trustless solution without single point of failure or downtime, with node runners come and go on the fly.</li>
-                <li><strong>Near real-time and verifiable result:</strong> Driven by the secure randomness engine built upon Verifiable Random Function (VRF) and advanced cryptographic primitives, the data request or computation is performed and consented off-chain but verifiable on-chain in a system contract. The delay between receiving request and delivering back response is within two blocks - the optimal one can achieve in theory.</li>
-                <li><strong>Scalable at a low cost:</strong> Thanks to the group sharding and off-chain consensus, the total data query throughput and computation capacity increases as more nodes joins DOS network.</li>
-                <li><strong>Compatible to heterogeneous blockchains:</strong> With core protocols operating in off-chain clients, it’s easy to support multiple public chains by adding off-chain adaptors and port on-chain governance contracts at a low overhead.</li>
-                <li><strong>Crypto economy:</strong> With designed token economic models and cryptographic primitives, it’s highly incentive for node runners to join the network early to earn the “mining” rewards and rapidly grow the network capacity. The network is resistant to sybil attack, with malicious nodes to be detected and forfeited of their stake and honest nodes always to be rewarded.</li>
-                <li><strong>And more:</strong> A data feed marketplace could even be built to enable lots of premium (paid) data sources to be able to sell their data service to smart contracts and monetize from blockchain traffic as well. After supporting multiple (at least two) chains, then an upper layer application protocol could be designed on top of DOS NETWORK to support cross chain contract call.</li>
-              </ul>
+              <p class="faq__margin-top">The role and value of DOS Network is to solve these two problems making same amount of effort to enrich smart contracts and decentralized economy with real world events and more computing powers before blockchain hits mass adoption.</p>
             </div>
           </li>
           <li class="faq__item">
@@ -682,9 +654,19 @@
               <!-- <img class="faq__title-icon" src="./img/collaspe.png" alt=""> -->
             </div>
             <div class="faq__content">
-              <p>DOS Network system is partitioned into two layers with several key components:</p>
-              <p class="faq__margin-top"><strong>On-chain part:</strong> A set of DOS system contracts deployed on supported blockchains, mainly including functionalities such as request handling and response/computation result verification, node registration and staking, stats monitoring, payment processing, etc. On-chain system contracts also provide a universal interface to all user contracts across supported chains</p>
-              <p class="faq__margin-top"><strong>Off-chain part:</strong> A client software implementing the core protocol run by third party users aiming for economic rewards, constituting a distributed network. Client software includes several important modules: event monitoring and chain adaptor module, distributed randomness engine module, off-chain group consensus module, and request processing/computation task processing module depending on the type of oracle service the user node provides.</p>
+                <p class="faq__margin-bottom">DOS Network system is partitioned into two layers with several key components:</p>
+              <ul class="faq__lower-latin-list">
+                <li><strong>On-chain part: </strong> A client software implementing the core protocol run by third party users aiming for economic rewards, constituting a distributed network. Client software includes several important modules: event monitoring and chain adaptor module, distributed randomness engine module, off-chain group consensus module, and request processing/computation task processing module depending on the type of oracle service the user node provides.</li>
+              </ul>
+            </div>
+          </li>
+          <li class="faq__item">
+            <div class="faq__title">
+              <h3 class="faq__title-text">How does the system defend against witch attacks?</h3>
+              <!-- <img class="faq__title-icon" src="./img/collaspe.png" alt=""> -->
+            </div>
+            <div class="faq__content">
+              <p>To avoid this problem, we need node operators to join the network through depositing tokens, which improves the standard to entry, greatly increase the cost of malicious nodes attacking the network and defend against witch attacks. At the same time, because the node operators deposit the tokens in the system, they also have more motivation to maintain the stability of the system because the more stable and prosperous the system, the more valuable the tokens they mortgage. That is to say, we bind the benefits of the node operator and the entire system.</p>
             </div>
           </li>
           <li class="faq__item">
@@ -693,33 +675,33 @@
               <!-- <img class="faq__title-icon" src="./img/collaspe.png" alt=""> -->
             </div>
             <div class="faq__content">
-              <p>The off-chain part is a stateless P2P network. This is a Layer 2 network that can support all mainstream blockchains. Anyone can join the network as long as he mortgages a certain amount of tokens and then runs the node's client. After joining the network, you can provide services for users and earn service fees. In addition, in order to stimulate the network cold start, we also introduced the mining mechanism. We reserved 30% of the total token as the reward of network cold start mining. The node operator can obtain the mining reward after joining the network through the mortgaged token.</p>
+              <p>The off-chain part is a stateless P2P network. This is a Layer 2 network that can support all mainstream blockchains. Anyone can join the network as long as he deposits a certain amount of tokens and then runs the node's client. After joining the network, you can provide services for users and earn service fees. In addition, in order to stimulate the network cold start, we also introduced the mining mechanism. We reserved 30% of the total token as the reward of network cold start mining. The node operator can obtain the mining reward after joining the network through depositing tokens.</p>
             </div>
           </li>
           <li class="faq__item">
             <div class="faq__title">
-              <h3 class="faq__title-text">What application scenarios can DOS Network be used in?</h3>
+              <h3 class="faq__title-text">Does DOS Network have tokens in this system? What role does it play?</h3>
               <!-- <img class="faq__title-icon" src="./img/collaspe.png" alt=""> -->
             </div>
             <div class="faq__content">
-              <p class="faq__margin-bottom">The DOS Network can be used by all applications that need to access out-of-chain data. For example:</p>
+              <p class="faq__margin-bottom">We have our own tokens. There are four main reasons why we use our own tokens instead of original currency like ETH:</p>
               <ul class="faq__lower-latin-list">
-                <li>stable currency, encrypted asset mortgage or algorithmic bank stable currency which needs to obtain real-time price information of cryptocurrency versus legal currency. </li>
-                <li>Market prediction requires real-world information as the final ruling of the forecast. </li>
-                <li>The application about aircraft delays or crop insurance require flight information or weather information as triggers for automatic claims.</li>
-                <li>Gaming games often require secure random numbers. However, in the closed environment of the blockchain, secure random numbers cannot be generated. So secure random numbers can be obtained from outside the chain through the DOS Network.</li>
-                <li>Financial derivatives platforms and lending platforms also require out-of-chain price information as a reference and trigger condition.</li>
+                <li>To isolate our system from the native blockchain, such as ETH, to prevent the risk of the native blockchain and currency fluctuations from affecting our service system, making our system relatively stable.</li>
+                <li>To increase the difficulty of attackers. If the attacker wants to buy a large number of tokens to attack our system, then the liquidity of the token will decrease and the price will increase, thus increasing the cost of the attacker.</li>
+                <li>To consolidate the stability and prosperity of the entire ecology with the interests of token holders. If the attacker attacks the network by purchasing a large number of tokens, the attacker himself will suffer losses as the token price decreases.</li>
+                <li>A final approach is provided: the network can be recovered from the attack by forking the DOS token contract. But we will not use this method unless forced.</li>
               </ul>
-              <p class="faq__margin-top">We believe that there is a safe, usable, and efficient decentralized Oracle that encourages more and more application scenarios to be implemented on the blockchain.</p>
+              <p class="faq__margin-top">The node operator joins the network by depositing a certain amount of tokens to provide services to users. Users need to pay tokens to these node operators when they need services. At the same time, users also need to pay tokens to the paid data provider after we go online in the future.</p>
             </div>
           </li>
           <li class="faq__item">
             <div class="faq__title">
-              <h3 class="faq__title-text">Do you have your own tokens in this system? What role does it play?</h3>
+              <h3 class="faq__title-text">Is DOS Network’s node-selection mechanism based on reputation system?</h3>
               <!-- <img class="faq__title-icon" src="./img/collaspe.png" alt=""> -->
             </div>
             <div class="faq__content">
-              <p>We have our own token. The node operator joins the network by mortgaging a certain amount of tokens to provide services to users. Users need to pay tokens to these node operators when they need services. At the same time, users also need to pay tokens to the paid data provider after we go online in the future.</p>
+              <p class="faq__margin-bottom">No, we are not based on a reputation system in which nodes with good reputation are selected as working nodes with a high probability. Since this will lead to targeting attacks and centralization. It also leads to the Matthew Effect, disincentivizing new node runners with same abilities.</p>
+              <p>We completely randomly choose a working group in the network. It is more fair for each node runner in this way.</p>
             </div>
           </li>
           <li class="faq__item">
@@ -733,28 +715,20 @@
           </li>
           <li class="faq__item">
             <div class="faq__title">
-              <h3 class="faq__title-text">How is the development progress of the project now?</h3>
+              <h3 class="faq__title-text">How can DOS Network return the off-chain data in real time?</h3>
               <!-- <img class="faq__title-icon" src="./img/collaspe.png" alt=""> -->
             </div>
             <div class="faq__content">
-              <p>The alpha version of the test network has just been released on the Testnet of Ethereum. Developers can already obtain the data outside the chain through the interface provided by us on the Ethernet Testnet. In the future, we will release a beta version of the test network in February, 2019, which will include all the features. We will launch Mainnet in May, 2019.</p>
+              <p>When the user's data request is assigned to the corresponding node, the node will go to the user-specified data source to grab the data, make a consensus within the network and return the result to the user in real time. The whole behavior is automatically completed by the software. No human involvement is required.</p>
             </div>
           </li>
           <li class="faq__item">
             <div class="faq__title">
-              <h3 class="faq__title-text">Where can I learn more about DOS Network?</h3>
+              <h3 class="faq__title-text">How is the performance of DOS Network?</h3>
               <!-- <img class="faq__title-icon" src="./img/collaspe.png" alt=""> -->
             </div>
             <div class="faq__content">
-              <p class="faq__margin-bottom">To learn more about DOS Network or to discuss questions of our project, feel free to connect with us through any of our official channels below:</p>
-              <ul>
-                <li>Website: https://www.dos.network</li>
-                <li>Telegram (Chinese Community): https://t.me/dosnetwork_cn</li>
-                <li>Telegram (English Community): https://t.me/dosnetwork_en</li>
-                <li>Twitter: https://twitter.com/DosNetwork</li>
-                <li>Github: https://github.com/DOSNetwork</li>
-              </ul>
-              <p class="faq__margin-top">Please check our Whitepaper to know about detailed descriptions of our technical design and crypto-economic mechanisms: (Link to the Whitepaper).</p>
+              <p>DOS network performance is relatively fast, but how long it takes to return depends on the performance of the layer 1 blockchain. For Ethereum, it is generally possible to return results at the next block time, which is also the fastest return time in theory. For blockchains where the layer 1 backbone is fast, it may take more than one block time to return the results. Regardless of the limitations of the layer 1 main chain, a request can be returned in about 2-5 seconds.</p>
             </div>
           </li>
         </ul>
