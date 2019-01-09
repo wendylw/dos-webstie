@@ -113,6 +113,12 @@
     text-transform: uppercase;
   }
 
+  &__subtitle {
+    display: block;
+    margin-top: 10px;
+    font-size: 1rem;
+  }
+
   &__content-container {
     position: absolute;
     top: 50%;
