@@ -178,7 +178,7 @@ $('.social-icons__telegram-container').on('click', function() {
 
 $('body').on('click', function(e) {
   if ($( e.target ).closest('.social-icons__telegram-container').length <= 0 ) {
-    $('.social-icons__telegram').toggle();
+    $('.social-icons__telegram').hide();
   }
 });
 

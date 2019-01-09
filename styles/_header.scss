@@ -27,7 +27,8 @@
     margin: 0 -14px;
   }
 
-  &__item {
+  &__item,
+  &__language-item {
     display: inline-block;
   }
 
@@ -49,6 +50,22 @@
 
   &.black {
     background-color: rgba(0, 0, 0, 0.8);
+  }
+
+  &__language {
+    float: right;
+    padding: 4px 0;
+    margin: 0 14px;
+  }
+
+  &__language-item.spliter {
+    padding: 6px 0;
+  }
+
+  &__language-link {
+    display: block;
+    padding: 6px 2px;
+    font-size: $big-font;
   }
 }
 
@@ -88,6 +105,10 @@
       img {
         max-width: 30px;
       }
+    }
+
+    &__language {
+      padding: 2px 0;
     }
   }
 
