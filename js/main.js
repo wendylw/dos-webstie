@@ -176,9 +176,18 @@ $('.social-icons__telegram-container').on('click', function() {
   $('.social-icons__telegram').toggle();
 });
 
+$('.header__language').on('click', function() {
+  $('.header__language-list').toggle();
+});
+
 $('body').on('click', function(e) {
-  if ($( e.target ).closest('.social-icons__telegram-container').length <= 0 ) {
+
+  if ($(e.target).closest('.social-icons__telegram-container').length <= 0) {
     $('.social-icons__telegram').hide();
+  }
+
+  if ($(e.target).closest('.header__language').length <= 0) {
+    $('.header__language-list').hide();
   }
 });
 
