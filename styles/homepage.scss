@@ -113,6 +113,10 @@
     text-transform: uppercase;
   }
 
+  &__title-en {
+    font-size: 34px;
+  }
+
   &__subtitle {
     display: block;
     margin-top: 10px;
@@ -869,6 +873,10 @@
     &__title {
       padding: 5px 0;
       font-size: $bigest-font;
+    }
+
+    &__title-en {
+      font-size: 26px;
     }
 
     &__content {
