@@ -1,5 +1,10 @@
 function client(){
-	if (window.innerHeight !== undefined) {
+  if ($(window).height()) {
+    return {
+			w: $(window).width(),
+			h:  $(window).height()
+		}
+  } else if (window.innerHeight !== undefined) {
 		return {
 			w: window.innerWidth,
 			h: window.innerHeight
@@ -24,6 +29,7 @@ function isSafari() {
 function getElementViewTop(element){
   var actualTop = element.offsetTop;
   var current = element.offsetParent;
+  var ua = navigator.userAgent.toLowerCase();
   var elementScrollTop = 0;
 
   while (current !== null){
@@ -37,7 +43,7 @@ function getElementViewTop(element){
     elementScrollTop = document.documentElement.scrollTop;
   }
 
-  if (isSafari()) {
+  if (isSafari() || ua.match(/MicroMessenger/i) == 'micromessenger') {
     elementScrollTop = $(window).scrollTop();
   }
 
@@ -45,11 +51,11 @@ function getElementViewTop(element){
 }
 
 function isActive($el, extraHeight) {
-  var scrollTop = getElementViewTop($el.get(0));
+  var offsetTop = getElementViewTop($el.get(0));
   var windowHeight = client().h;
   var extra = extraHeight || 0;
 
-  if (scrollTop < (windowHeight + extra) && !$el.hasClass('active')) {
+  if (offsetTop < (windowHeight + extra) && !$el.hasClass('active')) {
     $el.addClass('active');
 
     return true;
@@ -66,7 +72,7 @@ function sectionTitleActive() {
 }
 
 function introActive() {
-  if (isActive($('#about-us'))) {
+  if (isActive($('#about-us'), -100)) {
     $('.intro__image-container').addClass('fadeInRight');
     $('.intro__content-container').addClass('fadeInLeft');
   }
