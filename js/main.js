@@ -192,7 +192,6 @@ $('.faq__title').on('click', function(e) {
     teamActive();
     advisorsActive();
     partnerActive();
-    roadMapActive();
   });
 
   $(window).resize(function() {
@@ -225,6 +224,5 @@ $('.faq__title').on('click', function(e) {
     teamActive();
     advisorsActive();
     partnerActive();
-    roadMapActive();
   };
 }(jQuery));
