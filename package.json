@@ -4,7 +4,7 @@
   "description": "",
   "scripts": {
     "start": "http-server .",
-    "scss": "scss --watch styles/main.scss:css/main.css",
+    "scss": "scss --watch styles/main.scss:css/main.css styles/normalize.scss:css/normalize.css styles/homepage.scss:css/homepage.css",
     "release": "tar zcvf dos-website-$(date +%Y%m%dT%H%M).tar.gz ./*.html ./*.png ./*.ico ./css/*.css ./js ./img",
     "test": "echo \"Error: no test specified\" && exit 1"
   },

@@ -1,0 +1,173 @@
+.header {
+  position: fixed;
+  padding: 12px 0;
+  width: 100%;
+  color: $white;
+  background-color: transparent;
+  z-index: 10;
+
+  transition: all 0.4s;
+
+  &__logo {
+    display: inline-block;
+    max-width: 43px;
+    cursor: pointer;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  &__nav {
+    float: right;
+  }
+
+  &__list {
+    padding: 4px 0;
+    margin: 0 -14px;
+  }
+
+  &__item{
+    display: inline-block;
+  }
+
+  &__item-link {
+    text-align: center;
+    display: block;
+    padding: 6px 14px;
+    font-size: $big-font;
+
+    &:hover {
+      font-weight: bold;
+    }
+  }
+
+  &.white {
+    color: $black;
+    background-color: rgba(255, 255, 255, 0.8);
+  }
+
+  &.black {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+
+  &__language {
+    position: relative;
+    float: right;
+    padding: 4px 0;
+    margin: 0 14px;
+    cursor: pointer;
+  }
+
+  &__language-list {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 11;
+    width: 100%;
+  }
+
+  &__language-item.spliter {
+    padding: 6px 0;
+  }
+
+  &__language-button {
+    padding: 4px 2px;
+    font-size: $big-font;
+  }
+
+  &__language-link {
+    display: block;
+    padding: 6px 2px;
+    font-size: $big-font;
+  }
+
+  &__language-icon {
+    width: 14px;
+  }
+}
+
+.header.header-faq {
+  color: $main-color;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+@media (max-width: 1200px) {
+  .header {
+    .container {
+      padding-left: 24px;
+      padding-right: 24px;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .header {
+    min-height: 38px;
+    padding: 10px 0;
+
+    &__logo {
+      float: left;
+    }
+
+    &__nav {
+      display: none;
+    }
+
+    &__mobile-nav {
+      float: right;
+      display: inline-block !important;
+      padding: 10px 0;
+      text-align: right;
+
+      img {
+        max-width: 30px;
+      }
+    }
+
+    &__language {
+      padding: 2px 0;
+    }
+  }
+
+  .mobile-nav {
+    display: none !important;
+    position: fixed;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    color: $white;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 30;
+
+    &.show {
+      display: block !important;
+    }
+
+    &__close {
+      padding: 20px;
+    }
+
+    .header__nav {
+      display: block;
+      width: 100%;
+      height: 100%;
+      float: none;
+
+      li {
+        display: block;
+      }
+    }
+
+    .header__list {
+      margin: 0;
+    }
+
+    .header__item-link {
+      text-align: left;
+      padding: 20px;
+    }
+  }
+}

@@ -1,0 +1,178 @@
+@import "./var";
+
+.footer {
+  color: $white;
+  background-color: $black;
+  padding: 50px 0 30px;
+
+  .clear {
+    display: inline-block;
+  }
+
+  &__text {
+    text-align: left;
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0 3px;
+    font-size: $small-font;
+    min-width: 50px;
+  }
+
+  &__logo {
+    width: 60%;
+    max-width: 100px;
+  }
+
+  &__subtitle {
+    padding: 0;
+    margin: 0;
+  }
+
+  &__list-container {
+    vertical-align: top;
+    padding: 0 40px 0 0;
+  }
+
+  &__list-container:last-child {
+    padding-right: 0;
+  }
+
+  &__list {
+    padding: 14px 0;
+  }
+
+  &__item {
+    padding: 5px 0;
+  }
+
+  &__social-container {
+    padding: 14px 0;
+    margin: 0 -10px;
+  }
+
+  &__social-item {
+    vertical-align: top;
+    text-align: left;
+    font-size: 0;
+    display: inline-block;
+
+    span {
+      line-height: 16px;
+    }
+  }
+
+  &__social-item-link {
+    display: block;
+    padding: 5px 10px;
+  }
+
+  &__more-link {
+    padding-left: 32px;
+  }
+
+  &__more-image {
+    margin: 0 2px;
+    height: 12px;
+  }
+
+  &__social-image {
+    vertical-align: middle;
+    margin: 0 2px;
+    height: 16px;
+  }
+
+  &__info {
+    padding-top: 30px;
+    font-size: $smaller-font;
+  }
+
+  &__privacy-item {
+    position: relative;
+    display: inline-block;
+
+    a {
+      display: block;
+      padding: 0 7px;
+    }
+
+    &:before {
+      position: absolute;
+      left: 0;
+      top: 3px;
+      content: "";
+      display: block;
+      width: 1px;
+      height: 6px;
+      background-color: $white;
+    }
+  }
+
+  &__privacy-item:first-child:before {
+    display: none;
+  }
+
+  &__form-container {
+    margin: 24px 0 22px;
+    font-size: 0;
+  }
+
+  &__input {
+    font-size: $main-font;
+    min-width: 160px;
+    font-weight: bold;
+    border-radius: 12px 0 0 12px;
+  }
+
+  &__button {
+    border: 0;
+    font-size: $main-font;
+    color: $white;
+    background-color: $light-gray;
+    font-weight: bold;
+    border-radius: 0 12px 12px 0;
+  }
+
+  &__email-icon {
+    margin-right: 6px;
+    max-width: 16px;
+  }
+}
+
+@media (max-width: 992px) {
+  .footer {
+    padding: 10px 0;
+    text-align: center;
+
+    .container {
+      max-width: 410px;
+    }
+
+    .row {
+      display: block;
+    }
+
+    .col-md-4,
+    .col-md-8 {
+      float: none;
+      margin: 26px auto;
+      width: 100%;
+    }
+
+    &__social-container {
+      text-align: center;
+      padding: 0;
+    }
+
+    &__social-item-link {
+      padding: 5px 7px;
+    }
+
+    &__social-item-link img {
+      margin: 0 5px;
+    }
+
+    &__info {
+      padding-top: 0;
+    }
+  }
+}

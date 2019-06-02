@@ -1,0 +1,1175 @@
+@import "./var";
+
+.banner {
+  padding-top: 64px;
+  color: $white;
+  background-image: url(../img/banner-bg.jpg);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position: center center;
+
+  .container {
+    position: relative;
+    padding: 50px 0;
+  }
+
+  .social-icons {
+    position: absolute;
+    right: 0;
+    bottom: 150px;
+
+    &__item a:hover {
+      background-color: $white;
+    }
+
+    &__item {
+      position: relative;
+    }
+
+    &__telegram {
+      display: none;
+      position: absolute;
+      text-align: left;
+      top: 0;
+      right: 26px;
+      padding: 0 10px;
+
+      ul {
+        padding: 5px 15px;
+        min-width: 150px;
+        border: 1px solid $white;
+        background-color: $black;
+      }
+
+      a {
+        font-size: 1rem;
+        border: 0;
+      }
+
+      a:hover {
+        background-color: transparent;
+      }
+
+      img {
+        margin: 0 2px;
+      }
+    }
+  }
+
+  .hide {
+    display: none;
+  }
+
+  &__logo {
+    display: none;
+  }
+
+  &__subtitle {
+    padding: 30px 0 100px;
+    margin: 0 auto;
+    max-width: 570px;
+    font-size: $bigger-font;
+    line-height: 2em;
+    font-weight: normal;
+
+    br {
+      display: none;
+    }
+  }
+
+  &__button-container {
+    padding: 80px 0 0;
+  }
+
+  &__button {
+    display: inline-block;
+    padding: 8px 20px;
+    margin: 5px 10px;
+    border: 1px solid $white;
+    font-size: $big-font;
+    border-radius: 20px;
+    font-weight: bold;
+
+    &:hover {
+      color: $black;
+      background-color: $white;
+    }
+  }
+}
+
+.intro {
+  padding: 120px 0;
+  background-color: $lighter-gray;
+
+  .row {
+    position: relative;
+  }
+
+  &__title {
+    padding: 10px 0;
+    margin: 0;
+    max-width: 400px;
+    font-size: $title-font;
+    text-transform: uppercase;
+  }
+
+  &__title-en {
+    font-size: 34px;
+  }
+
+  &__subtitle {
+    display: block;
+    margin-top: 10px;
+    font-size: 1rem;
+  }
+
+  &__content-container {
+    opacity: 0;
+    position: absolute;
+    top: 0;
+  }
+
+  &__content {
+    margin: 14px 0 24px;
+    max-width: 340px;
+    line-height: 1.5em;
+  }
+
+  &__image-container {
+    opacity: 0;
+    margin-left: 50%;
+  }
+
+  &__image {
+    width: 100%;
+  }
+}
+
+.features {
+  padding: 50px 0;
+
+  .row {
+    padding: 40px 0;
+  }
+
+  .circle-1 {
+    animation: circleOpacity 6s infinite;
+  }
+
+  .circle-2 {
+    animation: circleOpacity 6s infinite;
+    animation-delay: .8s;
+  }
+
+  .circle-3 {
+    animation: circleOpacity 6s infinite;
+    animation-delay: 1.4s;
+  }
+
+  &__content {
+    position: relative;
+  }
+
+  &__item {
+    opacity: 0;
+    color: #999;
+    box-sizing: border-box;
+    cursor: pointer;
+  }
+
+  &__item.active {
+    color: $main-color;
+  }
+
+  &__item-title {
+    display: inline-block;
+    padding-bottom: 10px;
+    margin: 0;
+    border-bottom: 1px solid $main-color;
+  }
+
+  &__item-content {
+    margin: 0;
+    padding: 10px 0 0;
+  }
+
+  &__space {
+    display: block;
+    height: 20px;
+  }
+
+  &__image-container {
+    position: absolute;
+    left: 33%;
+    right: 33%;
+    top: 0;
+    margin: 40px 0;
+    width: 34%;
+
+    img {
+      display: block;
+      margin: 2% auto;
+      width: 94%;
+    }
+  }
+
+  &__circles {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: 2% auto;
+    width: 94%;
+  }
+
+  &__circle-item {
+    position: relative;
+    display: inline-block;
+    width: 10%;
+    opacity: 0;
+    background-image: url(../img/feature-tag-active.png);
+    background-repeat: no-repeat;
+    background-size: 40% auto;
+    background-position: center center;
+
+    transition: all 0.4s;
+    -webkit-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+    -ms-transition: all 0.4s;
+
+    &:before {
+      content: "";
+      display: block;
+      padding: 50% 0;
+    }
+  }
+
+  &__circle-item:nth-child(1) {
+    top: 5%;
+    left: 45.1%;
+  }
+
+  &__circle-item:nth-child(2) {
+    top: 46.5%;
+    left: 55.5%;
+  }
+
+  &__circle-item:nth-child(6) {
+    top: 46.5%;
+    left: -30%;
+  }
+
+  &__circle-item:nth-child(3),
+  &__circle-item:nth-child(4),
+  &__circle-item:nth-child(5) {
+    top: 89%;
+  }
+
+  &__circle-item:nth-child(5) {
+    left: -41%;
+  }
+
+  &__circle-item:nth-child(4) {
+    left: 12.5%;
+  }
+
+  &__circle-item:nth-child(3) {
+    left: 66%;
+  }
+
+  &__circle-item.active {
+    opacity: 1;
+  }
+
+  &__circle {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    display: block;
+    background-image: url(../img/circle.png);
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    background-position: center center;
+    border-radius: 50%;
+    cursor: pointer;
+
+    &:before {
+      content: "";
+      display: block;
+      padding: 50% 0;
+    }
+  }
+}
+
+.case {
+  padding: 50px 0;
+  background-color: $lighter-gray;
+
+  .container {
+    max-width: 1160px;
+  }
+
+  &__list {
+    padding: 30px 0;
+  }
+
+  &__image {
+    height: 90px;
+
+    img {
+      height: 100%;
+    }
+  }
+
+  &__divider {
+    display: block;
+    width: 10%;
+    height: 2px;
+    margin: 0 auto;
+    background-color: $dimmed-gray;
+  }
+
+  &__title {
+    margin: 20px 0;
+    font-weight: bold;
+  }
+
+  &__content {
+    margin: 20px auto;
+    line-height: 1.5em;
+    max-width: 240px;
+    font-size: $main-font;
+    color: $dimmed-gray;
+  }
+}
+
+.team {
+  padding: 50px 0;
+
+  .col-md-3 {
+    min-height: 390px;
+  }
+
+  .container {
+    max-width: 1090px;
+  }
+
+  &__item {
+    margin: 30px 0;
+  }
+
+  &__image-link {
+    display: block;
+  }
+
+  &__image {
+    opacity: 0;
+    margin: 0 auto;
+    max-width: 200px;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  &__item-content {
+    opacity: 0;
+  }
+
+  &__content {
+    margin: 14px auto 0;
+    width: 190px;
+    font-size: $small-font;
+    line-height: 1.5em;
+    color: $dimmed-gray;
+  }
+
+  &__name {
+    margin: 14px 0 8px;
+
+    span {
+      font-size: 1em;
+    }
+  }
+
+  &__linkedin {
+    display: inline-block;
+    margin: 10px 2px 0;
+    font-size: 0;
+
+    img {
+      max-width: 16px;
+    }
+  }
+
+  &__title {
+    margin: 0;
+    font-size: $small-font;
+    color: $dimmed-gray;
+    font-weight: bold;
+    font-style: italic;
+  }
+}
+
+.advisors,
+.investors {
+  padding: 50px 0;
+
+  .container {
+    max-width: 1090px;
+  }
+
+  .row:before {
+    content: "";
+    display: block;
+    width: 25%;
+    clear: both;
+  }
+
+  .row:after {
+    width: 25%;
+  }
+
+  .team__item {
+    float: none;
+  }
+}
+
+.partners {
+  .mobile-container {
+    padding-bottom: 50px;
+  }
+
+  .team__item {
+    margin: 10px 0;
+  }
+
+  .team__image-link {
+    padding: 30% 0;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center center;
+  }
+}
+
+.road-map {
+  padding: 50px 0;
+  text-align: center;
+  background-image: url(../img/road-map-bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  overflow-x: hidden;
+
+  .container {
+    max-width: 1280px;
+  }
+
+  .section-title {
+    padding-bottom: 0;
+  }
+
+  &__content {
+    margin: 40px 0;
+    max-width: 100%;
+  }
+
+  &__time-list {
+    position: relative;
+    padding: 40px 7% 40px 12%;
+  }
+
+  &__time-list:after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+
+  &__list {
+    float: left;
+    width: 50%;
+    font-size: 0;
+  }
+
+  &__item {
+    position: relative;
+    left: 30px;
+    vertical-align: top;
+    text-align: left;
+    display: inline-block;
+    width: 50%;
+    font-size: $main-font;
+
+    &:before {
+      position: absolute;
+      content: "";
+      display: block;
+      width: 1px;
+      background-color: $dimmed-gray;
+    }
+
+    &:after {
+      position: absolute;
+      content: "";
+      display: block;
+      width: 16px;
+      height: 16px;
+      background-image: url(../img/feature-tag-active.png);
+      background-repeat: no-repeat;
+      background-size: 100% auto;
+      background-position: center center;
+    }
+
+    li {
+      position: relative;
+      padding-left: 12px;
+      font-size: $main-font;
+      line-height: 1.5em;
+      color: $light-gray;
+
+      &:before {
+        position: absolute;
+        left: 0;
+        top: 10px;
+        vertical-align: middle;
+        content: "";
+        display: inline-block;
+        width: 4px;
+        height: 4px;
+        background-color: $dimmed-gray;
+        border-radius: 50%;
+      }
+    }
+  }
+
+  &__item.fadeRight {
+    opacity: 1;
+    left: 0;
+  }
+
+  &__list.after &__title:before,
+  &__list.after &__item:after {
+    background-image: url(../img/road-map-pointer.png);
+  }
+
+  &__list.after &__title,
+  &__list.after li {
+    color: $roadmap-gray;
+  }
+
+  &__list.after &__item:before {
+    background-color: $roadmap-gray;
+  }
+
+
+  &__list &__item:nth-child(1):before,
+  &__list &__item:nth-child(2):before {
+    left: -13px;
+    top: 20px;
+    bottom: 0;
+  }
+
+  &__list &__item:nth-child(1):after,
+  &__list &__item:nth-child(2):after {
+    left: -20px;
+    bottom: 0;
+
+    transform: translateY(50%);
+    -webkit-transform: translateY(50%);
+    -moz-transform: translateY(50%);
+    -ms-transform: translateY(50%);
+  }
+
+  &__list &__item:nth-child(3):before,
+  &__list &__item:nth-child(4):before {
+    left: -13px;
+    top: 0;
+    height: 85px;
+  }
+
+  &__list &__item:nth-child(3):after,
+  &__list &__item:nth-child(4):after {
+    left: -20px;
+    top: 0;
+
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+  }
+
+  &__list.before &__item li {
+    max-width: 170px;
+  }
+
+  &__list.after &__item li {
+    max-width: 210px;
+  }
+
+  &__list.after &__item:nth-child(2) li {
+    max-width: 180px;
+  }
+
+  &__list.after &__item:last-child li {
+    max-width: 150px;
+  }
+
+  &__list &__item:nth-child(1),
+  &__list &__item:nth-child(2), {
+    padding-bottom: 40px;
+    min-height: 140px;
+  }
+
+  &__list &__item:nth-child(3),
+  &__list &__item:nth-child(4), {
+    padding-top: 65px;
+    min-height: 115px;
+
+    transform: translateX(50%);
+    -webkit-transform: translateX(50%);
+    -moz-transform: translateX(50%);
+    -ms-transform: translateX(50%);
+  }
+
+  &__title {
+    position: relative;
+    padding: 10px 0;
+    margin: 0;
+    font-size: $bigger-font;
+
+    &:before {
+      position: absolute;
+      left: -16px;
+      top: 17px;
+      content: "";
+      display: block;
+      width: 7px;
+      height: 7px;
+      background-image: url(../img/feature-tag-active.png);
+      background-repeat: no-repeat;
+      background-size: 100% auto;
+      background-position: center center;
+    }
+  }
+
+  &__time-line {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 100%;
+    height: 2px;;
+    background-image: url(../img/road-map-line.png);
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    background-position: center center;
+  }
+}
+
+.faq {
+  padding: 50px 0;
+
+  p {
+    margin: 0;
+    line-height: 1.5em;
+  }
+
+  .container {
+    max-width: 900px;
+  }
+
+  .section-title {
+    padding-top: 0;
+  }
+
+  .faq__margin-top {
+    margin-top: 10px;
+  }
+
+  .faq__margin-bottom {
+    margin-bottom: 10px;
+  }
+
+  &__number-list {
+    padding-left: 15px;
+    list-style: decimal;
+  }
+
+  &__lower-latin-list {
+    padding-left: 15px;
+    list-style: lower-latin;
+  }
+
+  &__title {
+    padding: 20px 10px;
+    border-top: 1px solid $lightest-gray;
+    margin: 0;
+    cursor: pointer;
+  }
+
+  &__title-text {
+    margin: 0;
+    display: inline-block;
+    font-size: $big-font;
+  }
+
+  &__title-icon {
+    float: right;
+    margin: 4px 0;
+    max-height: 16px;
+
+    transition: all 0.4s;
+  }
+
+  &__content {
+    display: none;
+    padding: 20px 15px;
+
+    li ~ li {
+      margin-top: 10px;
+    }
+  }
+
+  &__item.active {
+    .faq__title-icon {
+      transform: rotateZ(180deg);
+      -webkit-transform: rotateZ(180deg);
+      -moz-transform: rotateZ(180deg);
+      -ms-transform: rotateZ(180deg);
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .road-map {
+    &__time-list {
+      padding: 40px 5% 40px 9%;
+    }
+  }
+}
+
+@media (max-width: 1100px) {
+  .banner {
+    .social-icons {
+      right: 15px;
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .team {
+    &__list {
+      .col-md-3 {
+        width: 33.333333%;
+      }
+    }
+  }
+
+  .road-map {
+    &__title {
+      font-size: $big-font;
+    }
+
+    &__item li {
+      font-size: $main-font;
+    }
+
+    &__list.after &__item li {
+      max-width: 170px;
+    }
+
+    &__list &__item:nth-child(3),
+    &__list &__item:nth-child(4) {
+      padding-top: 55px;
+
+      &:before {
+        height: 75px;
+      }
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  .features {
+    &__circle-item:nth-child(6) {
+      left: -31%;
+    }
+
+    &__circle-item:nth-child(3) {
+      left: 65%;
+    }
+
+    &__circle-item:nth-child(4) {
+      left: 12%;
+    }
+  }
+
+  .road-map {
+    &__time-list {
+      padding: 40px 0 40px 5%;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .banner {
+    background-size: cover;
+
+    .container {
+      padding: 100px 20px;
+    }
+
+    .social-icons {
+      position: static;
+
+      &__telegram {
+        top: 36px;
+        left: 0;
+        right: auto;
+        padding: 10px 0;
+      }
+    }
+
+    &__logo {
+      display: block;
+    }
+
+    &__subtitle {
+      padding-bottom: 6px;
+      max-width: 320px;
+      font-size: $big-font;
+
+      br {
+        display: inline-block;
+      }
+    }
+  }
+
+  .intro {
+    padding: 30px 0;
+
+    .container {
+      padding: 0 20px;
+    }
+
+    .col-md-6 {
+      float: none;
+      width: 100%;
+    }
+
+    &__image-container {
+      margin-left: 0;
+    }
+
+    &__image {
+      margin: 0 auto;
+      max-width: 300px;
+    }
+
+    &__content-container {
+      text-align: center;
+      position: static;
+      margin: 30px auto 0;
+      max-width: 410px;
+    }
+
+    &__title {
+      padding: 5px 0;
+      font-size: $bigest-font;
+    }
+
+    &__title-en {
+      font-size: 26px;
+    }
+
+    &__content {
+      text-align: center;
+      margin: 8px 0 18px;
+      max-width: 100%;
+    }
+  }
+
+  .features {
+    padding: 30px 0;
+
+    .row {
+      padding: 0;
+      margin: 0 auto;
+      max-width: 270px;
+    }
+
+    .col-md-3 {
+      text-align: center;
+      float: none;
+      width: 100%;
+    }
+
+    &__image-container {
+      position: relative;
+      left: 0;
+      right: 0;
+      margin: 20px auto 40px;
+      width: 250px;
+    }
+
+    &__space {
+      display: none;
+    }
+
+    &__item {
+      margin: 16px 0;
+    }
+
+    &__circle-item:nth-child(1) {
+      top: 4%;
+    }
+
+
+    &__circle-item:nth-child(3),
+    &__circle-item:nth-child(4),
+    &__circle-item:nth-child(5) {
+      top: 91%;
+    }
+
+    &__circle-item:nth-child(5) {
+      left: -42%;
+    }
+
+    &__circle-item:nth-child(6) {
+      left: -32%;
+    }
+  }
+
+  .case {
+    padding: 30px 0;
+
+    .col-md-4 {
+      float: none;
+      width: 100%;
+    }
+
+    &__list {
+      padding: 0;
+    }
+
+    &__item {
+      margin: 30px 0;
+    }
+
+    &__content {
+      max-width: 270px;
+    }
+  }
+
+  .team {
+    padding: 30px 0;
+
+    .col-md-3 {
+      width: 50%;
+    }
+
+    &__image img {
+      margin: 0 auto;
+      width: 90%;
+    }
+  }
+
+  .advisors,
+  .investors,
+  .partners {
+    padding: 30px 0;
+
+    .row:before,
+    .row:after {
+      content: none;
+    }
+
+    .col-md-3,
+    .col-md-4 {
+      width: 50%;
+    }
+  }
+
+  .partners {
+    .mobile-container {
+      padding-bottom: 30px;
+    }
+  }
+
+  .road-map {
+    &__time-line {
+      top: -40px;
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+      width: 2px;
+      height: 100%;
+      background-image: url(../img/road-map-line-mobile.png);
+    }
+
+    &__time-list {
+      padding: 40px 20px 0;
+      margin: 30px 0;
+    }
+
+    &__list {
+      position: relative;
+      padding-bottom: 190px;
+      width: 100%;
+    }
+
+    &__item {
+      display: block;
+      left: 0;
+
+      &:before {
+        height: 1px;
+        width: auto;
+      }
+
+      li {
+        display: block;
+      }
+    }
+
+    &__list &__item:nth-child(1),
+    &__list &__item:nth-child(2) {
+      padding: 0;
+      margin-left: 50%;
+      padding-left: 90px;
+
+      &:before {
+        top: 23px;
+        left: 0;
+        width: 124px;
+      }
+
+      &:after {
+        top: 8px;
+        left: -8px;
+      }
+    }
+
+    &__list &__item:nth-child(2) {
+      margin-top: 140px;
+    }
+
+    &__list &__item:nth-child(3),
+    &__list &__item:nth-child(4) {
+      position: absolute;
+      right: 50%;
+      padding: 0;
+      padding-right: 0;
+
+      transform: translateX(0%);
+      -webkit-transform: translateX(0%);
+      -moz-transform: translateX(0%);
+      -ms-transform: translateX(0%);
+
+      &:before {
+        top: 23px;
+        right: 0;
+        left: 34px;
+        height: 1px;
+      }
+
+      &:after {
+        top: 24px;
+        left: auto;
+        right: -8px;
+      }
+    }
+
+    &__list &__item:nth-child(3) {
+      top: 140px;
+    }
+
+    &__list.before &__item {
+      max-width: 190px;
+    }
+
+    &__list.after &__item {
+      max-width: 190px;
+    }
+
+    &__title:before {
+      position: static;
+      margin: 10px 0 10px 34px;
+    }
+  }
+
+  .faq {
+    padding: 30px 0;
+  }
+}
+
+@media (max-width: 600px) {
+  .road-map {
+    padding: 30px 0;
+
+    &__item li {
+      font-size: $small-font;
+    }
+
+    &__list.before &__item,
+    &__list.after &__item {
+      max-width: 150px;
+    }
+
+    &__list &__item:nth-child(1),
+    &__list &__item:nth-child(2) {
+      padding-left: 40px;
+
+      &:before {
+        width: 74px;
+      }
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .team,
+  .advisors,
+  .investors,
+  .partners {
+
+    .mobile-container {
+      max-width: 400px;
+      overflow-x: auto;
+    }
+
+    .row {
+      display: block;
+    }
+
+    .col-md-3,
+    .col-md-4 {
+      vertical-align: top;
+      width: 100%;
+    }
+  }
+
+  .advisors,
+  .investors,
+  .partners {
+    .team__list {
+      font-size: 0;
+    }
+  }
+
+  .advisors {
+    .team__list {
+      text-align: center;
+    }
+  }
+}
+
+@media (max-height: 700px) and (min-width: 768px) {
+  .banner {
+    &__button-container {
+      padding: 0;
+    }
+  }
+}
